@@ -72,6 +72,9 @@ keys = [
     Key([mod, "control"], "r", lazy.reload_config(), desc="Reload the config"),
     Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
     Key([mod], "r", lazy.spawncmd(), desc="Spawn a command using a prompt widget"),
+    # rofi
+    Key([mod], "m", lazy.spawn("rofi -show drun")),
+    Key([mod, "shift"], "m", lazy.spawn("rofi -show")),
 ]
 
 #groups
@@ -102,7 +105,8 @@ lightgrey = "888888"
 #layouts
 layout_theme = {"border_width": 2,
                 "margin": 8,
-                "border_focus": '61afef',
+                # "border_focus": '61afef',
+                "border_focus": 'eeeeee',
                 "border_normal": '1f1f25',
                 }
 
@@ -151,7 +155,7 @@ screens = [
             [
                 #widget.Sep(),
                 widget.GroupBox(
-                    highlight_method='line',
+                    highlight_method='block',
                     # active='61afef',
                     active='ffffff',
                     inactive=lightgrey,
@@ -163,6 +167,10 @@ screens = [
                 widget.Spacer(),
                 widget.Clock(),
                 widget.Spacer(),
+                # widget.CheckUpdates(
+                #     custom_command='checkupdates',
+                #     display_format='{updates}',
+                #     ),
                 widget.Sep(),
                 widget.Spacer(length=5),
                 widget.Wallpaper(
@@ -186,7 +194,7 @@ screens = [
                         mouse_callbacks = {'Button1':lazy.spawn("alacritty -e htop")},
                         fmt = 'Mem:{}',
                         padding = 5
-                        ),
+                ),
                 widget.Sep(),
                 widget.TextBox(
                     "墳",
