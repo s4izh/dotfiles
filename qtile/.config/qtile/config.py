@@ -102,8 +102,8 @@ lightgrey = "888888"
 #layouts
 layout_theme = {"border_width": 2,
                 "margin": 8,
-                "border_focus": white,
-                "border_normal": black,
+                "border_focus": '519aba',
+                "border_normal": '1f1f25',
                 }
 
 layouts = [
@@ -131,14 +131,14 @@ widget_defaults = dict(
 extension_defaults = widget_defaults.copy()
 
 
-def init_widgets_screen1():
-    widgets_screen1 = init_widgets_list()
-    return widgets_screen1
-
-def init_screens():
-    return [Screen(top=bar.Bar(widgets=init_widgets_screen1(), opacity=1.0, size=20)),
-            #Screen(top=bar.Bar(widgets=init_widgets_screen2(), opacity=1.0, size=20))
-            ]
+# def init_widgets_screen1():
+#     widgets_screen1 = init_widgets_list()
+#     return widgets_screen1
+#
+# def init_screens():
+#     return [Screen(top=bar.Bar(widgets=init_widgets_screen1(), opacity=1.0, size=20)),
+#             #Screen(top=bar.Bar(widgets=init_widgets_screen2(), opacity=1.0, size=20))
+#             ]
 
 #if __name__ in ["config", "__main__"]:
 #    screens = init_screens()
@@ -151,11 +151,10 @@ screens = [
             [
                 #widget.Sep(),
                 widget.GroupBox(
-                    highlight_method='block',
-                    active=white,
+                    highlight_method='line',
+                    active='519aba',
                     inactive=lightgrey,
-                    background=grey,
-                    highlight_color=['000000', '222222'],
+                    highlight_color=['1e222a', '1e222a'],
                     font='HackNerdFont',
                 ),
                 widget.Sep(),
@@ -168,7 +167,7 @@ screens = [
                 widget.Wallpaper(
                     directory='~/Pictures/bg/3440x1440',
                     label='',
-                    foreground=green,
+                    foreground='89b96d',
                 ),
                 widget.Spacer(length=10),
                 widget.Sep(),
@@ -180,7 +179,7 @@ screens = [
                 widget.Sep(),
                 widget.TextBox("",
                     #mouse_callbacks = {'Button1': lazy.spawn("alacritty")},
-                    foreground=blue,
+                    foreground='519aba',
                 ),
                 widget.Memory(
                         mouse_callbacks = {'Button1':lazy.spawn("alacritty -e htop")},
@@ -215,7 +214,7 @@ screens = [
             ],
             size = 24,
             opacity = 1,
-            background = grey,
+            background = '1e222a',
             #border_width=[2, 2, 2, 2],  # Draw top and bottom borders
             #border_color=[white, white, white, white],  # Borders are magenta
             #margin = 8,
