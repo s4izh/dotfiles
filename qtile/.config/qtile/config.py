@@ -102,7 +102,7 @@ lightgrey = "888888"
 #layouts
 layout_theme = {"border_width": 2,
                 "margin": 8,
-                "border_focus": '519aba',
+                "border_focus": '61afef',
                 "border_normal": '1f1f25',
                 }
 
@@ -152,7 +152,8 @@ screens = [
                 #widget.Sep(),
                 widget.GroupBox(
                     highlight_method='line',
-                    active='519aba',
+                    # active='61afef',
+                    active='ffffff',
                     inactive=lightgrey,
                     highlight_color=['1e222a', '1e222a'],
                     font='HackNerdFont',
@@ -202,7 +203,7 @@ screens = [
                 #widget.Sep(),
                 #widget.TextBox("", ),
                 widget.Clock(
-                    format="%d-%m-%Y",
+                    format="%d-%m-%Y",  
                 ),
                 widget.Sep(),
                 widget.QuickExit(
@@ -210,7 +211,7 @@ screens = [
                         foreground=red,
                         countdown_format='{}'
                 ),
-                widget.Spacer(length=5),
+                widget.Spacer(length=5,) 
             ],
             size = 24,
             opacity = 1,
@@ -274,7 +275,8 @@ cmd = [
     "setxkbmap es",
     "setxkbmap -option caps:escape",
     "picom --no-vsync &"
-    "nitrogen --restore &",
+    # "nitrogen --restore &",
+    "feh --bg-fill /home/s4izh/Pictures/bg/3440x1440/0002.jpg"
     "nm-applet &"
 ]
 
