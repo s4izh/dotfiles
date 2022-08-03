@@ -79,8 +79,7 @@ keys = [
 
 #groups
 groups = [Group(i) for i in [
-       # "   ","   ","   ","","   ","vbox","vid","comm",
-        "www","dev","term","doc","fm","vbox","vid","comm",
+       "www","dev","sys","doc","fm","vbox","vid","comm",
     ]]
   
 for i, group in enumerate(groups):
@@ -102,26 +101,6 @@ cyan=    "89b482"
 white=   "dfbf8e"
 grey = "282828"
 lightgrey = "888888"
-
-nord_theme = {
-    "background": '#2e3440',
-    "foreground": '#d8dee9',
-    "dim_foreground": '#a5abb6',
-    "text": '#2e3440',
-    "background2": '#4c566a',
-    "background3": '#88c0d0',
-    "background4":  '#434c5e',
-    "foreground2":  '#d8dee9',
-    "black":  '#4c566a',
-    "red":  '#bf616a',
-    "green":  '#a3be8c',
-    "yellow":  '#ebcb8b',
-    "blue":  '#81a1c1',
-    "magenta":  '#b48ead',
-    "cyan":  '#8fbcbb',
-    "white":  '#eceff4',
-        }
-
 
 #layouts
 layout_theme = {"border_width": 2,
@@ -174,48 +153,83 @@ screens = [
     Screen(
         top=bar.Bar(
             [
+                #widget.Sep(),
                 widget.GroupBox(
                     highlight_method='line',
-                    active=nord_theme["white"],
-                    inactive='666666',
-                    highlight_color=[nord_theme["background"], nord_theme["background"]],
+                    # active='61afef',
+                    active='bbbbbb',
+                    inactive='444444',
+                    highlight_color=['1e222a', '1e222a'],
                     font='HackNerdFont',
-                    fontsize=14,
                     this_current_screen_border = 'eeeeee',
-                    this_screen_border = nord_theme["white"],
-                    ),
+                    this_screen_border = '999999',
+                    # other_current_screen_border = '00ffff',
+                    other_screen_border = '00ffff',
+
+                ),
+                widget.Sep(),
+                widget.Prompt(),
                 widget.Spacer(),
-                widget.Clock(format="  %d-%m-%Y %a"),
                 widget.Clock(),
                 widget.Spacer(),
-                widget.TextBox(" ",
-                    mouse_callbacks = {'Button1':lazy.spawn("alacritty -e htop")},
-                    ),
-                widget.Spacer(length=15),
-                widget.Wlan(),
-                widget.Net(
-                    interface = "enp0s3",
-                    format = ' {down}↓↑{up}',
-                    padding = 5,
-                    use_bits = True,
-                    ),
-                widget.Spacer(length=15),
-                widget.Volume(
-                    fmt = '墳 {}',
-                    padding = 5,
-                    mouse_callbacks = {'Button1': lazy.spawn("pavucontrol")},
-                    ),
-                widget.Spacer(length=10),
-                widget.QuickExit(
-                    default_text="",
-                    countdown_format='{}'
+                # widget.CheckUpdates(
+                #     custom_command='checkupdates',
+                #     display_format='{updates}',
+                #     ),
+                widget.Sep(),
+                widget.Spacer(length=5),
+                widget.Wallpaper(
+                    directory='~/Pictures/bg/3440x1440',
+                    label='',
+                    foreground='89b96d',
                 ),
-                widget.Spacer(length=5) 
+                widget.Spacer(length=10),
+                widget.Sep(),
+                widget.Net(
+                       interface = "enp0s3",
+                       format = 'Net:{down}↓↑{up}',
+                       padding = 5
+                       ),
+                widget.Sep(),
+                widget.TextBox("",
+                    #mouse_callbacks = {'Button1': lazy.spawn("alacritty")},
+                    mouse_callbacks = {'Button1':lazy.spawn("alacritty -e htop")},
+                    foreground='519aba',
+                ),
+                widget.Memory(
+                        # mouse_callbacks = {'Button1':lazy.spawn("alacritty -e htop")},
+                        fmt = 'Mem:{}',
+                        padding = 5
+                ),
+                widget.Sep(),
+                widget.TextBox(
+                    "墳",
+                    foreground=yellow,
+                    mouse_callbacks = {'Button1': lazy.spawn("pavucontrol")},
+                ),
+                widget.Volume(
+                       fmt = 'Vol:{}',
+                       padding = 5
+                       ),
+
+                widget.Sep(),
+                #widget.Battery(),
+                #widget.Sep(),
+                #widget.TextBox("", ),
+                widget.Clock(
+                    format="%d-%m-%Y",  
+                ),
+                widget.Sep(),
+                widget.QuickExit(
+                        default_text="",
+                        foreground=red,
+                        countdown_format='{}'
+                ),
+                widget.Spacer(length=5,) 
             ],
             size = 24,
             opacity = 1,
-            background = nord_theme['background'],
-            foreground = nord_theme['foreground'],
+            background = '1e222a',
             #border_width=[2, 2, 2, 2],  # Draw top and bottom borders
             #border_color=[white, white, white, white],  # Borders are magenta
             #margin = 8,
@@ -275,8 +289,8 @@ cmd = [
     "setxkbmap es",
     "setxkbmap -option caps:escape",
     "picom --no-vsync &"
-    "nitrogen --restore &",
-    # "feh --bg-fill /home/s4izh/Pictures/bg/3440x1440/0002.jpg"
+    # "nitrogen --restore &",
+    "feh --bg-fill /home/s4izh/Pictures/bg/3440x1440/0002.jpg"
     "nm-applet &"
 ]
 
