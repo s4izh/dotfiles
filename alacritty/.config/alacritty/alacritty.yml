@@ -156,7 +156,7 @@ font:
     style: Bold Italic
 
   # Point size
-  size: 13.0
+  size: 12.0
 
   # Offset is the extra space around each character. `offset.y` can be thought
   # of as modifying the line spacing, and `offset.x` as modifying the letter
@@ -188,28 +188,28 @@ schemes:
 
 gruvbox: &gruvbox
   primary:
-    background: '0x282828'
-    foreground: '0xdfbf8e'
+    background: '#282828'
+    foreground: '#dfbf8e'
 
   normal:
-    black:   '0x665c54'
-    red:     '0xea6962'
-    green:   '0xa9b665'
-    yellow:  '0xe78a4e'
-    blue:    '0x7daea3'
-    magenta: '0xd3869b'
-    cyan:    '0x00bbbb'
-    white:   '0xdfbf8e'
+    black:   '#665c54'
+    red:     '#ea6962'
+    green:   '#a9b665'
+    yellow:  '#d79921'
+    blue:    '#7daea3'
+    magenta: '#d3869b'
+    cyan:    '#89b482'
+    white:   '#dfbf8e'
 
   bright:
-    black:   '0x928374'
-    red:     '0xea6962'
-    green:   '0xa9b665'
-    yellow:  '0xe3a84e'
-    blue:    '0x7daea3'
-    magenta: '0xd3869b'
-    cyan:    '0x00bbbb'
-    white:   '0xdfbf8e'
+    black:   '#928374'
+    red:     '#ea6962'
+    green:   '#a9b665'
+    yellow:  '#e3a84e'
+    blue:    '#7daea3'
+    magenta: '#d3869b'
+    cyan:    '#89b482'
+    white:   '#dfbf8e'
 
 nord: &nord
   primary:
@@ -233,32 +233,32 @@ nord: &nord
       background: '#434c5e'
       foreground: '#d8dee9'
   normal:
-    black: '#3b4252'
-    red: '#bf616a'
-    green: '#a3be8c'
-    yellow: '#ebcb8b'
-    blue: '#81a1c1'
+    black:   '#3b4252'
+    red:     '#bf616a'
+    green:   '#a3be8c'
+    yellow:  '#ebcb8b'
+    blue:    '#81a1c1'
     magenta: '#b48ead'
-    cyan: '#88c0d0'
-    white: '#e5e9f0'
+    cyan:    '#88c0d0'
+    white:   '#e5e9f0'
   bright:
-    black: '#4c566a'
-    red: '#bf616a'
-    green: '#a3be8c'
-    yellow: '#ebcb8b'
-    blue: '#81a1c1'
+    black:   '#4c566a'
+    red:     '#bf616a'
+    green:   '#a3be8c'
+    yellow:  '#ebcb8b'
+    blue:    '#81a1c1'
     magenta: '#b48ead'
-    cyan: '#8fbcbb'
-    white: '#eceff4'
+    cyan:    '#8fbcbb'
+    white:   '#eceff4'
   dim:
-    black: '#373e4d'
-    red: '#94545d'
-    green: '#809575'
-    yellow: '#b29e75'
-    blue: '#68809a'
+    black:   '#373e4d'
+    red:     '#94545d'
+    green:   '#809575'
+    yellow:  '#b29e75'
+    blue:    '#68809a'
     magenta: '#8c738c'
-    cyan: '#6d96a5'
-    white: '#aeb3bb'
+    cyan:    '#6d96a5'
+    white:   '#aeb3bb'
 
 astrovim: &astrovim
   primary:
