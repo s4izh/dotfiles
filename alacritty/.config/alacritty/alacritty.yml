@@ -260,29 +260,4 @@ nord: &nord
     cyan:    '#6d96a5'
     white:   '#aeb3bb'
 
-astrovim: &astrovim
-  primary:
-    background: '0x1e222a'
-    foreground: '0xabb2bf'
-
-  normal:
-    black:   '0x1f1f25'
-    red:     '0xe06c75'
-    green:   '0x89b96d'
-    yellow:  '0xe5c07b'
-    blue:    '0x61afef'
-    magenta: '0xff75a0'
-    cyan:    '0x00bbbb'
-    white:   '0xc9c9c9'
-
-  bright:
-    black:   '0x181a1f'
-    red:     '0xec5f67'
-    green:   '0x98c379'
-    yellow:  '0xebae34'
-    blue:    '0x40d9ff'
-    magenta: '0xee00ee'
-    cyan:    '0x00eeee'
-    white:   '0xdedede'
-
-colors: *nord
+colors: *gruvbox
