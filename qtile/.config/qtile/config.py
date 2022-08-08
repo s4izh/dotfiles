@@ -24,7 +24,7 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-from libqtile import bar, layout, widget
+from libqtile import bar, layout, widget, hook
 from libqtile.config import Click, Drag, Group, Key, Match, Screen
 from libqtile.lazy import lazy
 import os
@@ -80,7 +80,7 @@ keys = [
 #groups
 groups = [Group(i) for i in [
        # "   ","   ","   ","","   ","vbox","vid","comm",
-        "www","dev","term","doc","fm","vbox","vid","comm",
+        "www","dev","term","doc","fm","vbox","vid","misc","disc"
     ]]
   
 for i, group in enumerate(groups):
@@ -273,6 +273,13 @@ wl_input_rules = None
 
 wmname = "LG3D"
 
+@hook.subscribe.client_new
+def client_new(client):
+    if client.name == 'Mozilla Firefox':
+        client.togroup('www')
+    if client.name == 'Discord':
+        client.togroup('disc')
+
 # start up commands
 cmd = [
     "setxkbmap es",
@@ -281,7 +288,6 @@ cmd = [
     "nitrogen --restore &",
     # "feh --bg-fill /home/s4izh/Pictures/bg/3440x1440/0002.jpg"
     "nm-applet &"
-    "xinput --set-prop 10 295 0, 1"
 ]
 
 for i in cmd:
