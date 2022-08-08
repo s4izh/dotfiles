@@ -281,6 +281,7 @@ cmd = [
     "nitrogen --restore &",
     # "feh --bg-fill /home/s4izh/Pictures/bg/3440x1440/0002.jpg"
     "nm-applet &"
+    "xinput --set-prop 10 295 0, 1"
 ]
 
 for i in cmd:
