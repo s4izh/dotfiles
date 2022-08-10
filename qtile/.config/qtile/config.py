@@ -75,6 +75,9 @@ keys = [
     # rofi
     Key([mod], "m", lazy.spawn("rofi -show drun")),
     Key([mod, "shift"], "m", lazy.spawn("rofi -show")),
+    # lightdm
+    Key([mod, "mod1"], "l", lazy.spawn("dm-tool lock")),
+    Key([mod], "t", lazy.window.toggle_floating(), desc='Toggle floating'),
 ]
 
 #groups
@@ -284,9 +287,9 @@ def client_new(client):
 cmd = [
     "setxkbmap es",
     "setxkbmap -option caps:escape",
-    "picom --no-vsync &"
-    "nitrogen --restore &",
-    # "feh --bg-fill /home/s4izh/Pictures/bg/3440x1440/0002.jpg"
+    "picom --no-vsync &",
+    #"nitrogen --restore &",
+    "feh --bg-fill /home/s4izh/Pictures/bg/archnord.png",
     "nm-applet &"
 ]
 
