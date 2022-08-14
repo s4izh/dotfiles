@@ -82,7 +82,7 @@ input type:touchpad {
     bindsym $mod+Shift+q kill
 
     # Start your launcher
-    bindsym $mod+d exec $menu
+    bindsym $mod+m exec $menu
 
     # bindsym $mod+b exec firefox
 
