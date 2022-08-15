@@ -3,7 +3,7 @@
 # systray battery icon
 # cbatticon -u 5 &
 # systray volume
-# volumeicon &
+volumeicon &
 setxkbmap es
 setxkbmap -option caps:escape
 picom --no-vsync -b
