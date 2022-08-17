@@ -6,6 +6,6 @@
 volumeicon &
 setxkbmap es
 setxkbmap -option caps:escape
-picom --no-vsync -b
+picom -b
 feh --bg-fill /home/s4izh/Pictures/bg/1.png
 nm-applet &

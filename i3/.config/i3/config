@@ -190,3 +190,9 @@ bar {
 default_border pixel 2
 
 exec --no-startup-id /home/sergio/autostart.sh
+
+# night mode
+# on
+bindsym $mod+n exec --no-startup-id redshift -O 5000
+# off
+bindsym $mod+Shift+n exec --no-startup-id redshift -x
