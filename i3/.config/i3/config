@@ -52,7 +52,8 @@ bindsym $mod+Return exec alacritty
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec --no-startup-id dmenu_run -i
+# bindsym $mod+d exec --no-startup-id dmenu_run -i
+bindsym $mod+d exec dmenu_run -i -fn "HackNerdFont-10" -nf '#81a1c1' -sb '#81a1c1' -sf '#222'
 # start rofi (same function as dmenu)
 bindsym $mod+m exec --no-startup-id rofi -show drun
 # A more modern dmenu replacement is rofi:
@@ -213,6 +214,8 @@ exec --no-startup-id /home/sergio/autostart.sh
 bindsym $mod+n exec --no-startup-id redshift -O 5000
 # off
 bindsym $mod+Shift+n exec --no-startup-id redshift -x
+
 assign [class="firefox"] $ws1
+assign [class="obsidian"] $ws4
 
 exec --no-startup-id /home/s4izh/autostart.sh
