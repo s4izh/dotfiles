@@ -313,4 +313,4 @@ tokyo-night-storm: &tokyo-night-storm
       cyan:    '#0db9d7'
       white:   '#acb0d0'
 
-colors: *gruvbox2
+colors: *nord
