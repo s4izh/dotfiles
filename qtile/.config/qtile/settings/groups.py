@@ -1,9 +1,28 @@
+# Antonio Sarosi
+# https://youtube.com/c/antoniosarosi
+# https://github.com/antoniosarosi/dotfiles
+
+# Qtile workspaces
+
 from libqtile.config import Key, Group
 from libqtile.command import lazy
 from .keys import mod, keys
 
+
+# Get the icons at https://www.nerdfonts.com/cheat-sheet (you need a Nerd Font)
+# Icons: 
+# nf-fa-firefox, 
+# nf-fae-python, 
+# nf-dev-terminal, 
+# nf-fa-code, 
+# nf-oct-git_merge, 
+# nf-linux-docker,
+# nf-mdi-image, 
+# nf-mdi-layers
+
 groups = [Group(i) for i in [
-    "dev","www","sys","doc","obs","vbox","vid","misc",
+    # "   ", "   ", "   ", "   ", "  ", "   ", "   ", "   ", "   ",
+    " www ", " dev ", " sys ", " doc ", " fm ", " vbox ", " vid ", " misc ", " disc ",
 ]]
 
 for i, group in enumerate(groups):

@@ -1,45 +1,104 @@
+# Antonio Sarosi
+# https://youtube.com/c/antoniosarosi
+# https://github.com/antoniosarosi/dotfiles
+
+# Qtile keybindings
+
 from libqtile.config import Key
 from libqtile.command import lazy
 
+
 mod = "mod4"
 
-keys = [
-    # A list of available commands that can be bound to keys can be found
-    # at https://docs.qtile.org/en/latest/manual/config/lazy.html
-    # Switch between windows
-    Key([mod], "h", lazy.layout.left(), desc="Move focus to left"),
-    Key([mod], "l", lazy.layout.right(), desc="Move focus to right"),
-    Key([mod], "j", lazy.layout.down(), desc="Move focus down"),
-    Key([mod], "k", lazy.layout.up(), desc="Move focus up"),
-    Key([mod], "space", lazy.layout.next(), desc="Move window focus to other window"),
-    # Move windows between left/right columns or move up/down in current stack.
-    # Moving out of range in Columns layout will create new column.
-    Key([mod, "shift"], "h", lazy.layout.shuffle_left(), desc="Move window to the left"),
-    Key([mod, "shift"], "l", lazy.layout.shuffle_right(), desc="Move window to the right"),
-    Key([mod, "shift"], "j", lazy.layout.shuffle_down(), desc="Move window down"),
-    Key([mod, "shift"], "k", lazy.layout.shuffle_up(), desc="Move window up"),
-    # Grow windows. If current window is on the edge of screen and direction
-    # will be to screen edge - window would shrink.
-    Key([mod, "control"], "h", lazy.layout.grow_left(), desc="Grow window to the left"),
-    Key([mod, "control"], "l", lazy.layout.grow_right(), desc="Grow window to the right"),
-    Key([mod, "control"], "j", lazy.layout.grow_down(), desc="Grow window down"),
-    Key([mod, "control"], "k", lazy.layout.grow_up(), desc="Grow window up"),
-    Key([mod], "n", lazy.layout.normalize(), desc="Reset all window sizes"),
-    # Toggle between split and unsplit sides of stack.
-    # Split = all windows displayed
-    # Unsplit = 1 window displayed, like Max layout, but still with
-    # multiple stack panes
-    Key(
-        [mod, "shift"],
-        "Return",
-        lazy.layout.toggle_split(),
-        desc="Toggle between split and unsplit sides of stack",
-    ),
-    Key([mod], "Return", lazy.spawn(alacritty), desc="Launch terminal"),
+keys = [Key(key[0], key[1], *key[2:]) for key in [
+    # ------------ Window Configs ------------
+
+    # Switch between windows in current stack pane
+    ([mod], "j", lazy.layout.down()),
+    ([mod], "k", lazy.layout.up()),
+    ([mod], "h", lazy.layout.left()),
+    ([mod], "l", lazy.layout.right()),
+    ([mod], "space", lazy.layout.next()),
+
+    # Change window sizes (MonadTall)
+    ([mod, "shift"], "l", lazy.layout.grow()),
+    ([mod, "shift"], "h", lazy.layout.shrink()),
+
+    # Toggle floating
+    ([mod, "shift"], "f", lazy.window.toggle_floating()),
+
+    # Move windows up or down in current stack
+    # ([mod, "shift"], "j", lazy.layout.shuffle_down()),
+    # ([mod, "shift"], "k", lazy.layout.shuffle_up()),
+
+    # Shuffle windows around
+    ([mod, "shift"], "h", lazy.layout.shuffle_left()),
+    ([mod, "shift"], "l", lazy.layout.shuffle_right()),
+    ([mod, "shift"], "j", lazy.layout.shuffle_down()),
+    ([mod, "shift"], "k", lazy.layout.shuffle_up()),
+
     # Toggle between different layouts as defined below
-    Key([mod], "Tab", lazy.next_layout(), desc="Toggle between layouts"),
-    Key([mod], "w", lazy.window.kill(), desc="Kill focused window"),
-    Key([mod, "control"], "r", lazy.reload_config(), desc="Reload the config"),
-    Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
-    Key([mod], "r", lazy.spawncmd(), desc="Spawn a command using a prompt widget"),
-]
+    ([mod], "Tab", lazy.next_layout()),
+    ([mod, "shift"], "Tab", lazy.prev_layout()),
+
+    # Kill window
+    ([mod], "w", lazy.window.kill()),
+
+    # Switch focus of monitors
+    ([mod], "period", lazy.next_screen()),
+    ([mod], "comma", lazy.prev_screen()),
+
+    # Restart Qtile
+    ([mod, "control"], "r", lazy.restart()),
+
+    ([mod, "control"], "q", lazy.shutdown()),
+    ([mod], "r", lazy.spawncmd()),
+
+    ([mod, "control"], "h", lazy.layout.grow_left()),
+    ([mod, "control"], "l", lazy.layout.grow_right()),
+    ([mod, "control"], "j", lazy.layout.grow_down()),
+    ([mod, "control"], "k", lazy.layout.grow_up()),
+    ([mod], "n", lazy.layout.normalize()),
+
+    # ------------ App Configs ------------
+
+    # Menu
+    ([mod], "m", lazy.spawn("rofi -show drun")),
+
+    # Window Nav
+    ([mod, "shift"], "m", lazy.spawn("rofi -show")),
+
+    # Browser
+    ([mod], "b", lazy.spawn("firefox")),
+
+    # File Explorer
+    ([mod], "e", lazy.spawn("pcmanfm")),
+
+    # Terminal
+    ([mod], "Return", lazy.spawn("alacritty")),
+
+    # Redshift
+    ([mod], "r", lazy.spawn("redshift -O 4000")),
+    ([mod, "shift"], "r", lazy.spawn("redshift -x")),
+
+    # Screenshot
+    ([mod], "s", lazy.spawn("scrot")),
+    ([mod, "shift"], "s", lazy.spawn("scrot -s")),
+
+    # ------------ Hardware Configs ------------
+
+    # Volume
+    ([], "XF86AudioLowerVolume", lazy.spawn(
+        "pactl set-sink-volume @DEFAULT_SINK@ -5%"
+    )),
+    ([], "XF86AudioRaiseVolume", lazy.spawn(
+        "pactl set-sink-volume @DEFAULT_SINK@ +5%"
+    )),
+    ([], "XF86AudioMute", lazy.spawn(
+        "pactl set-sink-mute @DEFAULT_SINK@ toggle"
+    )),
+
+    # Brightness
+    ([], "XF86MonBrightnessUp", lazy.spawn("brightnessctl set +10%")),
+    ([], "XF86MonBrightnessDown", lazy.spawn("brightnessctl set 10%-")),
+]]
