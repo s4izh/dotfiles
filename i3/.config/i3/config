@@ -34,7 +34,7 @@ bindsym $mod+mod1+l exec dm-tool lock
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
-# exec --no-startup-id nm-applet
+exec --no-startup-id nm-applet
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -218,13 +218,15 @@ client.focused #81a1c1 #81a1c1 #81a1c1 #5e81ac
 
 default_border pixel 2
 
-exec --no-startup-id /home/sergio/autostart.sh
-
-
 assign [class="firefox"] $ws1
 assign [class="obsidian"] $ws4
 
 # to make a make a window floating and sticky by default
 # for_window [class="zoom"] floating enable, sticky enable
 
-exec --no-startup-id /home/s4izh/autostart.sh
+exec --no-startup-id /home/s4izh/dotfiles/keymap.sh
+
+exec --no-startup-id volumeicon
+exec --no-startup-id picom -b
+exec --no-startup-id feh --bg-fill /home/s4izh/Pictures/bg/archnord.png
+
