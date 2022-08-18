@@ -14,7 +14,7 @@ zle_highlight=('paste:none')
 # beeping is annoying
 unsetopt BEEP
 
-
+# [ -z "$TMUX"  ] && { tmux attach || exec tmux new-session && exit;}
 # completions
 autoload -Uz compinit
 zstyle ':completion:*' menu select

@@ -1,6 +1,6 @@
 #!/bin/sh
 
-alias zshrc='nvim ~/.config/zsh/'
+alias zshrc='cd ~/.config/zsh && nvim .zshrc'
 alias nvimrc='nvim ~/.config/nvim/'
 
 # Manual aliases
@@ -10,6 +10,8 @@ alias l='lsd --group-dirs=first'
 alias lla='lsd -lha --group-dirs=first'
 alias ls='lsd --group-dirs=first'
 alias cat='bat'
+
+alias vim='nvim'
 
 alias j='z'
 alias f='zi'
@@ -22,7 +24,7 @@ alias mirrord="sudo reflector --latest 50 --number 20 --sort delay --save /etc/p
 alias mirrors="sudo reflector --latest 50 --number 20 --sort score --save /etc/pacman.d/mirrorlist"
 alias mirrora="sudo reflector --latest 50 --number 20 --sort age --save /etc/pacman.d/mirrorlist"
 
-# Colorize grep output (good for log files)
+# colorize grep output (good for log files)
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
