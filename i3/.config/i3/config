@@ -218,7 +218,7 @@ bar {
 #borders
 client.focused #8fbcbb #8fbcbb #8fbcbb #999999
 
-default_border pixel 2
+default_border pixel 1
 hide_edge_borders smart
 
 assign [class="firefox"] $ws1
