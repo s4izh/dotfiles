@@ -216,7 +216,7 @@ bar {
 }
 
 #borders
-client.focused #dddddd #dddddd #dddddd #999999
+client.focused #8fbcbb #8fbcbb #8fbcbb #999999
 
 default_border pixel 2
 
