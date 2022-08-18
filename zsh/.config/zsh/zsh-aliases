@@ -1,7 +1,8 @@
 #!/bin/sh
 
-alias zshrc='cd ~/.config/zsh && nvim .zshrc'
-alias nvimrc='nvim ~/.config/nvim/'
+alias zshcf='cd ~/.config/zsh && nvim .zshrc'
+alias nvimcf='nvim ~/.config/nvim/'
+alias i3cf='cd ~/.config/i3 && nvim config'
 
 # Manual aliases
 alias ll='lsd -lh --group-dirs=first'
