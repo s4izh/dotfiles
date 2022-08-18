@@ -58,6 +58,8 @@ bindsym $mod+Shift+q kill
 bindsym $mod+d exec dmenu_run -i -fn "HackNerdFont-10" -nf '#dddddd' -sb '#dddddd' -sf '#222'
 # start rofi (same function as dmenu)
 bindsym $mod+m exec --no-startup-id rofi -show drun
+bindsym $mod+Shift+m exec --no-startup-id rofi -show
+
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
 # There also is i3-dmenu-desktop which only displays applications shipping a
@@ -224,9 +226,8 @@ assign [class="obsidian"] $ws4
 # to make a make a window floating and sticky by default
 # for_window [class="zoom"] floating enable, sticky enable
 
-exec --no-startup-id /home/s4izh/dotfiles/keymap.sh
+# exec --no-startup-id volumeicon
+# exec --no-startup-id /home/s4izh/dotfiles/keymap.sh
 
-exec --no-startup-id volumeicon
-exec --no-startup-id picom -b
-exec --no-startup-id feh --bg-fill /home/s4izh/Pictures/bg/archnord.png
+exec --no-startup-id /home/s4izh/.config/i3/autostart.sh
 
