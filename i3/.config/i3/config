@@ -55,7 +55,7 @@ bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
 # bindsym $mod+d exec --no-startup-id dmenu_run -i
-bindsym $mod+d exec dmenu_run -i -fn "HackNerdFont-10" -nf '#dddddd' -sb '#dddddd' -sf '#222'
+bindsym $mod+d exec dmenu_run -i -fn "HackNerdFont-10" -nf '#8fbcbb' -sb '#8fbcbb' -sf '#222' -nb '#0f101a'
 # start rofi (same function as dmenu)
 bindsym $mod+m exec --no-startup-id rofi -show drun
 bindsym $mod+Shift+m exec --no-startup-id rofi -show
