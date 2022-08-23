@@ -55,7 +55,7 @@ bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
 # bindsym $mod+d exec --no-startup-id dmenu_run -i
-bindsym $mod+d exec dmenu_run -i -fn "HackNerdFont-10" -nf '#8fbcbb' -sb '#8fbcbb' -sf '#222' -nb '#0f101a'
+bindsym $mod+d exec dmenu_run -i -fn "HackNerdFont-9" -nf '#8fbcbb' -sb '#8fbcbb' -sf '#222' -nb '#0f101a'
 # start rofi (same function as dmenu)
 bindsym $mod+m exec --no-startup-id rofi -show drun
 bindsym $mod+Shift+m exec --no-startup-id rofi -show
@@ -206,9 +206,9 @@ bar {
 		#background #222222ff
         background #0f101a
 		statusline #eeeeee
-		separator #666666
+		separator #eeeeee
            	#                  border  backgr. text
-		focused_workspace  #0f101a #2e3440 #8fbcbb
+		focused_workspace  #0f101a #2e3440 #ffffff
 		active_workspace   #333333 #5f676a #999999
 		inactive_workspace #0f101a #0f101a #999999
 		urgent_workspace   #2f343a #900000 #ffffff
@@ -233,4 +233,6 @@ assign [class="Pcmanfm"] $ws5
 # exec --no-startup-id /home/s4izh/dotfiles/keymap.sh
 
 exec --no-startup-id /home/s4izh/.config/i3/autostart.sh
+
+exec --no-startup-id /home/s4izh/.config/i3/volumeicon.sh
 
