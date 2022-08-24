@@ -68,7 +68,7 @@ primary_widgets = [
     # widget.CurrentLayoutIcon(**base(bg='color1'), scale=0.65),
     # widget.CurrentLayout(**base(bg='color1'), padding=5),
 
-    widget.Bluetooth(),
+    # widget.Bluetooth(),
 
     widget.Spacer(length = 10, background=colors['color1']),
 
@@ -140,19 +140,13 @@ primary_widgets = [
 secondary_widgets = [
     *workspaces(),
 
-    separator(),
+    widget.Spacer(background=colors['color1']),
 
-    powerline('color1', 'dark'),
+    widget.Clock(**base(bg='color1'), format='%H:%M '),
 
-    widget.CurrentLayoutIcon(**base(bg='color1'), scale=0.65),
+    widget.Spacer(background=colors['color1']),
 
-    widget.CurrentLayout(**base(bg='color1'), padding=5),
-
-    powerline('color2', 'color1'),
-
-    widget.Clock(**base(bg='color2'), format='%d/%m/%Y - %H:%M '),
-
-    powerline('dark', 'color2'),
+    widget.Clock(**base(bg='color1'), format='%d/%m/%Y'),
 ]
 
 widget_defaults = {
