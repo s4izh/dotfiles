@@ -27,6 +27,9 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
     # Toggle floating
     ([mod, "shift"], "f", lazy.window.toggle_floating()),
 
+    # Toggle fullscreen
+    ([mod], "f", lazy.window.toggle_fullscreen()),
+
     # Move windows up or down in current stack
     # ([mod, "shift"], "j", lazy.layout.shuffle_down()),
     # ([mod, "shift"], "k", lazy.layout.shuffle_up()),
@@ -58,12 +61,15 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
     ([mod, "control"], "l", lazy.layout.grow_right()),
     ([mod, "control"], "j", lazy.layout.grow_down()),
     ([mod, "control"], "k", lazy.layout.grow_up()),
-    ([mod], "n", lazy.layout.normalize()),
+    ([mod, "control"], "n", lazy.layout.normalize()),
 
     # ------------ App Configs ------------
 
-    # Menu
+    # rofi menu
     ([mod], "m", lazy.spawn("rofi -show drun")),
+    # dmenu
+    # ([mod], "d", lazy.spawn("dmenu_run -i -fn \"HackNerdFont-9\" -nf '#8fbcbb' -sb '#8fbcbb' -sf '#222' -nb '#0f101a'")),
+    ([mod], "d", lazy.spawn("dmenu_run -i -fn \"HackNerdFont-9\"")),
 
     # Window Nav
     ([mod, "shift"], "m", lazy.spawn("rofi -show")),
@@ -72,18 +78,21 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
     ([mod], "b", lazy.spawn("firefox")),
 
     # File Explorer
-    ([mod], "e", lazy.spawn("pcmanfm")),
+    ([mod], "e", lazy.spawn("thunar")),
 
     # Terminal
     ([mod], "Return", lazy.spawn("alacritty")),
 
     # Redshift
-    ([mod], "r", lazy.spawn("redshift -O 4000")),
-    ([mod, "shift"], "r", lazy.spawn("redshift -x")),
+    ([mod], "n", lazy.spawn("redshift -O 5000")),
+    ([mod, "shift"], "n", lazy.spawn("redshift -x")),
 
     # Screenshot
     ([mod], "s", lazy.spawn("scrot")),
     ([mod, "shift"], "s", lazy.spawn("scrot -s")),
+
+    # Logout
+    # ([mod], "º", lazy.spawn("dm-tool lock")),
 
     # ------------ Hardware Configs ------------
 

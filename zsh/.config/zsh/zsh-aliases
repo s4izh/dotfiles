@@ -2,6 +2,7 @@
 
 alias zshcf='cd ~/.config/zsh && nvim .zshrc'
 alias nvimcf='nvim ~/.config/nvim/'
+alias qtilecf='cd ~/.config/qtile && nvim .'
 alias i3cf='cd ~/.config/i3 && nvim config'
 
 # Manual aliases

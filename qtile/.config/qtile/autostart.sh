@@ -1,11 +1,12 @@
 #!/bin/sh
 
 # systray battery icon
-# cbatticon -u 5 &
+cbatticon -u 5 &
 # systray volume
 volumeicon &
+
 setxkbmap es
 setxkbmap -option caps:escape
-picom -b
-feh --bg-fill /home/s4izh/Pictures/bg/archnord.png
+# picom -b
+feh --bg-fill /home/s4izh/Pictures/bg/north1.png
 nm-applet &

@@ -30,6 +30,11 @@ def client_new(client):
         client.togroup(' www ')
     if client.name == 'Discord':
         client.togroup(' disc ')
+    # thunar
+    if client.name == 's4izh':
+        client.togroup(' fm ')
+    if client.name == 'Oracle VM VirtualBox Manager':
+        client.togroup(' vbox ')
 
 main = None
 dgroups_key_binder = None
