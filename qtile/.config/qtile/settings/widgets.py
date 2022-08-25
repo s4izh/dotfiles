@@ -56,6 +56,8 @@ def workspaces():
 
 primary_widgets = [
     *workspaces(),
+    widget.CurrentLayoutIcon(**base(bg='color1'), scale=0.65),
+    widget.CurrentLayout(**base(bg='color1'), padding=5),
 
     # separator(),
     widget.Spacer(background = colors['color1']),
