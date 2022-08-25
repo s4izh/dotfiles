@@ -13,7 +13,7 @@ alias lla='lsd -lha --group-dirs=first'
 alias ls='lsd --group-dirs=first'
 alias cat='bat'
 
-alias vim='nvim'
+alias v='nvim'
 
 alias j='z'
 alias f='zi'
