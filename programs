@@ -1,4 +1,5 @@
 firefox
+zsh
 alacritty
 tmux
 fzf
@@ -10,4 +11,10 @@ figlet
 lsd
 bat
 lightdm
-
+lightdm-gtk-greeter
+unzip
+stow
+redshift
+wget
+htop
+tmux

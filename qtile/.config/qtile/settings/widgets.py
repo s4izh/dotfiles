@@ -40,6 +40,7 @@ def workspaces():
             inactive=colors['inactive'],
             rounded=False,
             highlight_method='block',
+            block_highlight_text_color='#000000',
             # highlight_color='#444444',
             # urgent_alert_method='block',
             urgent_border= colors['urgent'],
