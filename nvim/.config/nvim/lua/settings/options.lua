@@ -7,14 +7,15 @@ o.nu = true  -- Indent current line number
 o.hlsearch = false  -- Don't highlight search
 o.incsearch = true  -- jump incrementally to search results
 o.hidden = true -- allow hidden buffers
+o.cursorline = true -- cursor line
 o.errorbells = false -- ding ding!
 o.wrap = false -- don't wrap long lines
 o.swapfile = false -- don't need no swap files!
 o.backup = false  -- ... or a backup!
 o.undodir = "~/.nvim/undodir"  -- sets where undo files land
 o.scrolloff = 8  -- scroll offwidth so it's not the very bottom
-o.colorcolumn = "80"  -- bar at 80 chars width
--- vim.o.signcolumn = "yes" -- always set the far left bar/column
+-- o.colorcolumn = "80"  -- bar at 80 chars width
+-- o.signcolumn = "yes" -- always set the far left bar/column
 -- o.nocompatible = true
 o.mouse = "a"  -- always enable mouse mode
 -- 4 spaces tab
@@ -31,7 +32,7 @@ o.splitright = true -- automagically v split going right
 
 opt.listchars = {  -- see hidden chars and their colors
 	tab = "| ",
-	--- eol = '¬',
+	eol = '¬',
 	trail = '·'
 }
 o.list = true
