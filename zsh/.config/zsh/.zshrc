@@ -81,6 +81,7 @@ autoload edit-command-line; zle -N edit-command-line
 export EDITOR="nvim"
 export TERMINAL="alacritty"
 export BROWSER="firefox"
+export BAT_THEME="gruvbox-dark"
 
 # For QT Themes
 #export QT_QPA_PLATFORMTHEME=qt5ct
