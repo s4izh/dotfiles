@@ -26,7 +26,7 @@ local config = {
 	},
 
 	-- Set colorscheme to use
-	colorscheme = "nord",
+	colorscheme = "gruvbox",
 
 	-- Override highlight groups in any theme
 	highlights = {
