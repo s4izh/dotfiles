@@ -24,6 +24,7 @@ import subprocess
 def autostart():
     subprocess.call([path.join(qtile_path, 'autostart.sh')])
 
+
 @hook.subscribe.client_new
 def client_new(client):
     if client.name == 'Mozilla Firefox':
@@ -37,6 +38,7 @@ def client_new(client):
         client.togroup(' vbox ')
     if client.name == 'Lutris':
         client.togroup(' misc ')
+
 
 main = None
 dgroups_key_binder = None
