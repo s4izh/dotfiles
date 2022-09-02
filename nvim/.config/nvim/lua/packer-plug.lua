@@ -14,8 +14,8 @@ return require('packer').startup(function()
 	-- coments
 	use("tpope/vim-commentary")
 	-- bar
-	use("vim-airline/vim-airline")
-	use("vim-airline/vim-airline-themes")
+	-- use("vim-airline/vim-airline")
+	-- use("vim-airline/vim-airline-themes")
 	-- git
 	use("jreybert/vimagit")
 	-- distraction free

@@ -7,6 +7,9 @@ map('n', '<C-j>', '<C-w>j')
 map('n', '<C-k>', '<C-w>k')
 map('n', '<C-l>', '<C-w>l')
 
+map('n', '<leader>v', '<C-w>v')
+map('n', '<leader>c', '<C-w>c')
+
 -- save, save all, quite
 map('n', '<leader>w', '<CMD>update<CR>')
 map('n', '<leader>W', '<CMD>wall<CR>')
@@ -32,5 +35,3 @@ map('n', '<leader>e',"<cmd>NeoTreeFocusToggle<cr>")
 
 -- goyo (zen mode)
 map('n', '<leader>z',"<cmd>Goyo<cr>")
-
-
