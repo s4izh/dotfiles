@@ -1,0 +1,3 @@
+xinput --list
+# check id
+xinput --set-prop <id> 294 0 1
