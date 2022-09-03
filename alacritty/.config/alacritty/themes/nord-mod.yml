@@ -1,13 +1,13 @@
 colors:
   primary:
-    background: "#232323"
+    background: "#282828"
     foreground: "#d8dee9"
     dim_foreground: "#a5abb6"
   cursor:
-    text: "#232323"
+    text: "#282828"
     cursor: "#d8dee9"
   vi_mode_cursor:
-    text: "#232323"
+    text: "#282828"
     cursor: "#d8dee9"
   selection:
     text: CellForeground
