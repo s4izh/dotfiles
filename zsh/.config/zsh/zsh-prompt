@@ -32,8 +32,8 @@ zstyle ':vcs_info:*' check-for-changes true
 zstyle ':vcs_info:git:*' formats " %{$fg[blue]%}(%{$fg[red]%}%m%u%c%{$fg[yellow]%}%{$fg[magenta]%} %b%{$fg[blue]%})"
 # zstyle ':vcs_info:git:*' formats " %{$fg[blue]%}(%{$fg[red]%}%m%u%c%{$fg[yellow]%}%{$fg[magenta]%}%b%{$fg[blue]%})"
 
-LUKE="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[cyan]%}%c"
-LUKE+="%{$fg[red]%}]%{$reset_color%}$%b "
+# LUKE="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[cyan]%}%c"
+# LUKE+="%{$fg[red]%}]%{$reset_color%}$%b "
 
 GERRY="%F{yellow}%n%F{green}[%m] %F{blue}%1~%f%b% "
 GERRY+="\$vcs_info_msg_0_"
