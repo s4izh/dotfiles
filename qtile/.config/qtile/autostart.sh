@@ -8,5 +8,5 @@ volumeicon &
 setxkbmap es
 setxkbmap -option caps:escape
 picom -b
-feh --bg-fill /home/s4izh/Pictures/wallpaper
+feh --bg-fill /home/s4izh/Pictures/system-wallpaper
 nm-applet &
