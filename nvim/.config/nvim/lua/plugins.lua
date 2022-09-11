@@ -47,7 +47,11 @@ return require('packer').startup(function()
 		config = [[require('plugins/colorizer')]],
 	}
 	-- wimwiki
-	-- use("wimwiki/wimwiki")
+
+	use {
+		'vimwiki/vimwiki',
+		setup = function() require "plugins.vimwiki" end
+	}
 
 	use {
 		'lewis6991/gitsigns.nvim', requires = { 'nvim-lua/plenary.nvim' },
@@ -115,11 +119,11 @@ return require('packer').startup(function()
       config = [[ require('plugins/treesitter') ]]
     }
 
-    use {
-      "nvim-lualine/lualine.nvim",
-      requires = {"kyazdani42/nvim-web-devicons", opt = true},
-      config = [[ require('plugins/lualine') ]]
-    }
+    -- use {
+    --   "nvim-lualine/lualine.nvim",
+    --   requires = {"kyazdani42/nvim-web-devicons", opt = true},
+    --   config = [[ require('plugins/lualine') ]]
+    -- }
 
     use {
       "mhartington/formatter.nvim",
