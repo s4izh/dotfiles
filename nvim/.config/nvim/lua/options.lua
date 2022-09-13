@@ -19,7 +19,7 @@ o.backup = false  -- ... or a backup!
 o.undodir = "~/.nvim/undodir"  -- sets where undo files land
 o.scrolloff = 8  -- scroll offwidth so it's not the very bottom
 -- o.colorcolumn = "80"  -- bar at 80 chars width
-o.signcolumn = "yes" -- always set the far left bar/column
+-- o.signcolumn = "yes" -- always set the far left bar/column
 -- o.nocompatible = true
 o.mouse = "a"  -- always enable mouse mode
 
