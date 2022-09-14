@@ -60,3 +60,5 @@ alias systemctl-list="systemctl list-unit-files --state=enabled"
 
 alias m="git checkout main"
 alias s="git checkout stable"
+
+alias sz="source ~/.config/zsh/.zshrc"

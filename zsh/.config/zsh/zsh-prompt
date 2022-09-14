@@ -32,12 +32,6 @@ zstyle ':vcs_info:*' check-for-changes true
 zstyle ':vcs_info:git:*' formats " %{$fg[blue]%}(%{$fg[red]%}%m%u%c%{$fg[yellow]%}%{$fg[magenta]%} %b%{$fg[blue]%})"
 # zstyle ':vcs_info:git:*' formats " %{$fg[blue]%}(%{$fg[red]%}%m%u%c%{$fg[yellow]%}%{$fg[magenta]%}%b%{$fg[blue]%})"
 
-# LUKE="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[cyan]%}%c"
-# LUKE+="%{$fg[red]%}]%{$reset_color%}$%b "
-
-# GERRY="%F{yellow}%n%F{green}[%m] %F{blue}%1~%f%b% "
-# GERRY+="\$vcs_info_msg_0_"
-# GERRY+="%B%(?.%F{grey}.%F{red}) %(!.#.$)%f%b "
 # format our main prompt for hostname current folder, and permissions.
 # c@m="%B%{$fg[blue]%}[%{$fg[white]%}%n%{$fg[red]%}@%{$fg[white]%}%m%{$fg[blue]%}] %(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ )%{$fg[cyan]%}%c%{$reset_color%}"
 # c@m="%B%{$fg[blue]%}[%{$fg[white]%}s4izh%{$fg[red]%}@%{$fg[white]%}arch%{$fg[blue]%}] %(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ )%{$fg[cyan]%}%c%{$reset_color%}"
@@ -65,8 +59,20 @@ zstyle ':vcs_info:git:*' formats " %{$fg[blue]%}(%{$fg[red]%}%m%u%c%{$fg[yellow]
 # ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[blue]%})"
 
 # zstyle ':vcs_info:git:*' formats " %{$fg[blue]%}git:(%{$fg[red]%}%m%u%c%{$fg[yellow]%}%{$fg[magenta]%} %b%{$fg[blue]%})"
-PROMPT=" %(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ )%{$fg[cyan]%}%c%{$reset_color%}"
-PROMPT+="\$vcs_info_msg_0_ "
-PROMPT+="%{$reset_color%}$%b "
+# PROMPT=" %(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ )%{$fg[cyan]%}%c%{$reset_color%}"
+# PROMPT="%{$fg[cyan]%}%c%{$reset_color%}"
+# PROMPT+="\$vcs_info_msg_0_ "
+# PROMPT+="%{$reset_color%}$%b "
 
-# PROMPT=$LUKE
+# luke style
+# PROMPT="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[cyan]%}%c"
+# PROMPT+="%{$fg[red]%}]%{$reset_color%}$%b "
+
+# gerry style
+# PROMPT="%F{yellow}%n%F{green}[%m] %F{blue}%1~%f%b% "
+# PROMPT+="\$vcs_info_msg_0_"
+# PROMPT+="%B%(?.%F{grey}.%F{red}) %(!.#.$)%f%b "
+
+# minimal with :
+PROMPT="%F{blue}%1~%f%b% "
+PROMPT+="%{$reset_color%}:%: "
