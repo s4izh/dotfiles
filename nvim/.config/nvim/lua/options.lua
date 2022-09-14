@@ -3,7 +3,7 @@ local opt = vim.opt
 
 -- vim.g.gruvbox_disable_background = true
 -- require('gruvbox').set()
-vim.cmd("colorscheme gruvbox")
+-- vim.cmd("colorscheme gruvbox")
 
 o.relativenumber = true  -- relative number in gutter
 o.nu = true  -- Indent current line number

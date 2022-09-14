@@ -9,6 +9,10 @@ return require('packer').startup(function()
 		config = [[require('plugins/gruvbox')]]
 	}
 	use 'folke/tokyonight.nvim'
+
+	use 'chriskempson/base16-vim'
+
+	use 'shaunsingh/nord.nvim'
 	-- telescope
 	use("nvim-lua/plenary.nvim")
 	use("nvim-lua/popup.nvim")
