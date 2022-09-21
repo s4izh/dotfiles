@@ -45,7 +45,7 @@ end
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
-beautiful.init(gears.filesystem.get_themes_dir() .. "zenburn/theme.lua")
+beautiful.init(gears.filesystem.get_themes_dir() .. "zenburn-mod/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
 terminal = "alacritty"
@@ -95,8 +95,8 @@ mymainmenu = awful.menu({ items = { { "awesome", myawesomemenu, beautiful.awesom
                                   }
                         })
 
-mylauncher = awful.widget.launcher({ image = beautiful.awesome_icon,
-                                     menu = mymainmenu })
+-- mylauncher = awful.widget.launcher({ image = beautiful.awesome_icon,
+--                                      menu = mymainmenu })
 
 -- Menubar configuration
 menubar.utils.terminal = terminal -- Set the terminal for applications that require it
@@ -196,14 +196,14 @@ awful.screen.connect_for_each_screen(function(s)
     }
 
     -- Create the wibox
-    s.mywibox = awful.wibar({ position = "top", screen = s, height = 17})
+    s.mywibox = awful.wibar({ position = "top", screen = s, height = 19})
 
     -- Add widgets to the wibox
     s.mywibox:setup {
         layout = wibox.layout.align.horizontal,
         { -- Left widgets
             layout = wibox.layout.fixed.horizontal,
-            mylauncher,
+            -- mylauncher,
             s.mytaglist,
             s.mypromptbox,
         },
@@ -313,9 +313,18 @@ globalkeys = gears.table.join(
     -- dmenu
     awful.key({ modkey },"p",function() awful.util.spawn("dmenu_run") end,
               {description = "run dmenu", group = "launcher"}),
+
+	-- dmenu monitors
+    awful.key({ modkey, "Mod1" },"m",function() awful.util.spawn("/home/s4izh/Personal/dmenu/monitor") end,
+              {description = "select monitor", group = "extra"}),
+
+	-- dmenu system menu
+    awful.key({ modkey, "Mod1" },"x",function() awful.util.spawn("/home/s4izh/Personal/dmenu/sysmenu") end,
+              {description = "system menu", group = "extra"}),
+
     -- brave
     awful.key({ modkey },"b",function() awful.util.spawn("brave") end,
-              {description = "run brave browser", group = "launcher"}),
+              {description = "run brave browser", group = "applications"}),
 
     awful.key({ modkey }, "x",
               function ()
@@ -574,5 +583,5 @@ awful.spawn.with_shell("feh --bg-fill ~/Pictures/system-wallpaper")
 awful.spawn.with_shell("setxkbmap es -option caps:escape")
 -- awful.spawn.with_shell("picom -f")
 awful.spawn.with_shell("nm-applet")
-awful.spawn.with_shell("volumeicon")
-awful.spawn.with_shell("cbatticon -u 5")
+-- awful.spawn.with_shell("volumeicon")
+-- awful.spawn.with_shell("cbatticon -u 5")

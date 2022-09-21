@@ -12,6 +12,8 @@ return require('packer').startup(function()
 
 	use 'chriskempson/base16-vim'
 
+	use "EdenEast/nightfox.nvim"
+
 	use 'shaunsingh/nord.nvim'
 	-- telescope
 	use("nvim-lua/plenary.nvim")
@@ -134,6 +136,7 @@ return require('packer').startup(function()
       "mhartington/formatter.nvim",
       config = [[ require('plugins/formatter') ]]
     }
+
     -- use {
     --   "nvim-telescope/telescope-project.nvim"
     -- }

@@ -49,3 +49,13 @@ map("n", "<Leader>ff", "<cmd>Telescope find_files<cr>")
 map("n", "<Leader>fg", "<cmd>Telescope live_grep<cr>")
 map("n", "<Leader>fb", "<cmd>Telescope buffers<cr>")
 map("n", "<Leader>fr", "<cmd>Telescope bibtex<cr>")
+
+-- toggle gitsigns
+map("n", "<Leader>gs", "<cmd>Gitsigns toggle_signs<cr>")
+
+-- lsp
+map("n", "<Leader>la", "<cmd>LspStop<cr>")
+map("n", "<Leader>le", "<cmd>LspStart<cr>")
+
+-- compile current md file into pdf
+-- map("n", "<Leader>p", "<cmd>!pandoc %s")
