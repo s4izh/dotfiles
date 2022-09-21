@@ -58,7 +58,11 @@ alias archlinx-fix-keys="sudo pacman-key --init && sudo pacman-key --populate ar
 # systemd
 alias systemctl-list="systemctl list-unit-files --state=enabled"
 
-alias m="git checkout main"
-alias s="git checkout stable"
 
 alias sz="source ~/.config/zsh/.zshrc"
+
+# git
+alias gm="git checkout main"
+alias gc="git commit -m"
+alias gst="git status"
+alias ga="git add"
