@@ -32,17 +32,18 @@ end
 local servers = {
     "tsserver", -- for javascript
     "jsonls", -- for json
-    -- "jdtls", -- for java
+    "jdtls", -- for java
     -- "texlab", -- for latex
     -- "ltex",
     "sqlls", -- for sql
     "pylsp", -- for python
-		"sumneko_lua", -- for lua
+	"sumneko_lua", -- for lua
     -- "gopls", -- for go
     "yamlls",
     "bashls",
     "dockerls",
     "clangd", -- for c
+	"rust-analyzer", -- for rust
 }
 
 -- setup the LS
