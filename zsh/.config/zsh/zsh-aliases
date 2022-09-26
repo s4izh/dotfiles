@@ -66,3 +66,6 @@ alias gm="git checkout main"
 alias gc="git commit -m"
 alias gst="git status"
 alias ga="git add"
+
+# ssh par
+alias sshpar="ssh -X par4318@boada.ac.upc.edu"
