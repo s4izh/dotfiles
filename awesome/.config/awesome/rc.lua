@@ -317,15 +317,19 @@ globalkeys = gears.table.join(
 
 	-- dmenu monitors
     awful.key({ modkey, "Mod1" },"m",function() awful.util.spawn("/home/s4izh/Personal/dmenu/monitor") end,
-              {description = "select monitor", group = "extra"}),
+              {description = "select monitor", group = "tools"}),
 
 	-- dmenu system menu
     awful.key({ modkey, "Mod1" },"x",function() awful.util.spawn("/home/s4izh/Personal/dmenu/sysmenu") end,
-              {description = "system menu", group = "extra"}),
+              {description = "system menu", group = "tools"}),
 
     -- brave
     awful.key({ modkey },"b",function() awful.util.spawn("brave") end,
-              {description = "run brave browser", group = "applications"}),
+              {description = "run brave browser", group = "launcher"}),
+
+	-- scrot (screenshots)
+    awful.key({ modkey, "Shift"},"s",function() awful.util.spawn("scrot -s -e 'mv $f ~/Pictures/screenshots/'") end,
+              {description = "screenshot", group = "tools"}),
 
     awful.key({ modkey }, "x",
               function ()
