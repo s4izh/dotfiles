@@ -15,6 +15,7 @@ return require('packer').startup(function()
 	use "EdenEast/nightfox.nvim"
 
 	use 'shaunsingh/nord.nvim'
+	use 'dylanaraps/wal.vim'
 	-- telescope
 	use("nvim-lua/plenary.nvim")
 	use("nvim-lua/popup.nvim")

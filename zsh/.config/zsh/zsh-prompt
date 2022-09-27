@@ -69,7 +69,8 @@ zstyle ':vcs_info:git:*' formats " %{$fg[blue]%}(%{$fg[red]%}%m%u%c%{$fg[yellow]
 # PROMPT+="%{$fg[red]%}]%{$reset_color%}$%b "
 
 # gerry style
-PROMPT="%F{yellow}%n%F{green}[%m] %F{blue}%1~%f%b% "
+#PROMPT="%F{yellow}%n%F{green}[%m] %F{blue}%1~%f%b% "
+PROMPT="%F{blue}%1~%f%b% "
 PROMPT+="\$vcs_info_msg_0_"
 PROMPT+="%B%(?.%F{grey}.%F{red}) %(!.#.$)%f%b "
 
