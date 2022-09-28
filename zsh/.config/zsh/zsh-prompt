@@ -29,7 +29,7 @@ zstyle ':vcs_info:git*+set-message:*' hooks git-untracked
 
 zstyle ':vcs_info:*' check-for-changes true
 # zstyle ':vcs_info:git:*' formats " %r/%S %b %m%u%c "
-zstyle ':vcs_info:git:*' formats " %{$fg[blue]%}(%{$fg[red]%}%m%u%c%{$fg[yellow]%}%{$fg[magenta]%} %b%{$fg[blue]%})"
+# zstyle ':vcs_info:git:*' formats " %{$fg[blue]%}(%{$fg[red]%}%m%u%c%{$fg[yellow]%}%{$fg[magenta]%} %b%{$fg[blue]%})"
 # zstyle ':vcs_info:git:*' formats " %{$fg[blue]%}(%{$fg[red]%}%m%u%c%{$fg[yellow]%}%{$fg[magenta]%}%b%{$fg[blue]%})"
 
 # format our main prompt for hostname current folder, and permissions.
@@ -70,6 +70,8 @@ zstyle ':vcs_info:git:*' formats " %{$fg[blue]%}(%{$fg[red]%}%m%u%c%{$fg[yellow]
 
 # gerry style
 #PROMPT="%F{yellow}%n%F{green}[%m] %F{blue}%1~%f%b% "
+zstyle ':vcs_info:git:*' formats " %{$fg[red]%}%m%u%c%{$fg[yellow]%}[%{$fg[magenta]%}%b%{$fg[yellow]%}]"
+
 PROMPT="%F{blue}%1~%f%b% "
 PROMPT+="\$vcs_info_msg_0_"
 PROMPT+="%B%(?.%F{grey}.%F{red}) %(!.#.$)%f%b "
