@@ -6,7 +6,7 @@
 # All imports must either be absolute paths starting with `/`, or paths relative
 # to the user's home directory starting with `~/`.
 import:
-  - ~/.config/alacritty/themes/nord.yml
+  - ~/.config/alacritty/themes/tokyo-night-storm.yml
 
 # Any items in the `env` entry below will be added as
 # environment variables. Some entries may override variables
@@ -107,20 +107,20 @@ import:
 # Font configuration
 font:
   normal:
-    family: HackNerdFont
+    family: JetBrainsMono NerdFont
     style: Regular
   bold:
-    family: HackNerdFont
+    family: JetBrainsMono NerdFont
     style: Bold
   italic:
-    family: HackNerdFont
+    family: JetBrainsMono NerdFont
     style: Italic
   bold_italic:
-    family: HackNerdFont
+    family: JetBrainsMono NerdFont
     style: Bold Italic
 
   # Point size
-  size: 12.0
+  size: 13.0
 
   # Offset is the extra space around each character. `offset.y` can be thought
   # of as modifying the line spacing, and `offset.x` as modifying the letter
