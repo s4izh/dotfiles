@@ -69,3 +69,5 @@ alias ga="git add"
 
 # ssh par
 alias sshpar="ssh -X par4318@boada.ac.upc.edu"
+
+alias index="nvim index*"

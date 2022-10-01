@@ -80,7 +80,7 @@ autoload edit-command-line; zle -N edit-command-line
 # Environment variables set everywhere
 export EDITOR="nvim"
 export TERMINAL="alacritty"
-export BROWSER="brave"
+export BROWSER="firefox"
 export BAT_THEME="gruvbox-dark"
 
 # For QT Themes

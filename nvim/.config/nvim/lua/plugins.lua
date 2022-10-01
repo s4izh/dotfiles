@@ -127,11 +127,11 @@ return require('packer').startup(function()
       config = [[ require('plugins/treesitter') ]]
     }
 
-    use {
-      "nvim-lualine/lualine.nvim",
-      requires = {"kyazdani42/nvim-web-devicons", opt = true},
-      config = [[ require('plugins/lualine') ]]
-    }
+    -- use {
+    --   "nvim-lualine/lualine.nvim",
+    --   requires = {"kyazdani42/nvim-web-devicons", opt = true},
+    --   config = [[ require('plugins/lualine') ]]
+    -- }
 
     use {
       "mhartington/formatter.nvim",
