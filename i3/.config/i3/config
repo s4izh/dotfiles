@@ -29,6 +29,9 @@ bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+# brightnessctl to adjust brightnessctl
+bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +10%
+bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 10%-
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -37,7 +40,7 @@ floating_modifier $mod
 bindsym $mod+Return exec alacritty
 
 # kill focused window
-bindsym $mod+Shift+q kill
+bindsym $mod+q kill
 
 # start dmenu (a program launcher)
 bindsym $mod+p exec --no-startup-id dmenu_run
@@ -173,36 +176,33 @@ bindsym $mod+r mode "resize"
 # bar {
 #         status_command i3status
 # }
+
 client.focused #a9b1d6 #a9b1d6 #a9b1d6 #999999
 
 hide_edge_borders smart
-for_window [class="^.*"] border pixel 1
+for_window [class="^.*"] border pixel 2
 for_window [class="Pavucontrol"] floating enable
 
 gaps inner 10
-# gaps outer 5
 
-assign [class="brave"] $ws1
-assign [class="MuPDF"] $ws3
-assign [class="obsidian"] $ws4
+assign [class="firefox"] $ws1
 assign [class="Pcmanfm"] $ws5
+assign [class="discord"] $ws9
 
 # default_border none
 # default_floating_border 1pixel
-
 # dmenu scripts
 bindsym $mod+mod1+m exec ~/personal/dmenu/scripts/monitormenu
 bindsym $mod+mod1+k exec ~/personal/dmenu/scripts/kblayoutmenu
 bindsym $mod+mod1+l exec ~/personal/dmenu/scripts/sysmenu
 
-bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +10%
-bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 10%-
 
 bindsym --release Print exec --no-startup-id scrot -s
 
 bindsym $mod+shift+m move workspace to output next
 
-# bindsym - resize shrink width 3 px or 3 ppt
-# bindsym + resize grow width 3 px or 3 ppt
+# bindsym $mod+o resize shrink width 3 px or 3 ppt
+# bindsym $mod+i resize grow width 3 px or 3 ppt
 
-exec polybar
+exec --no-startup-id exec ~/.config/i3/autostart.sh
+exec --no-startup-id exec ~/.config/polybar/launch.sh
