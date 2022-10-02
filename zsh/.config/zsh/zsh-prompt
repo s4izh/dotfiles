@@ -65,17 +65,29 @@ zstyle ':vcs_info:*' check-for-changes true
 # PROMPT+="%{$reset_color%}$%b "
 
 # luke style
-# PROMPT="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[cyan]%}%c"
+# PROMPT="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[cyan]%}%p"
 # PROMPT+="%{$fg[red]%}]%{$reset_color%}$%b "
 
 # gerry style
 #PROMPT="%F{yellow}%n%F{green}[%m] %F{blue}%1~%f%b% "
-zstyle ':vcs_info:git:*' formats " %{$fg[red]%}%m%u%c%{$fg[yellow]%}[%{$fg[magenta]%}%b%{$fg[yellow]%}]"
+# zstyle ':vcs_info:git:*' formats " %{$fg[yellow]%}[%{$fg[red]%}%m%u%c%{$fg[magenta]%}%b%{$fg[yellow]%}]"
 
-PROMPT="%F{blue}%1~%f%b% "
-PROMPT+="\$vcs_info_msg_0_"
-PROMPT+="%B%(?.%F{grey}.%F{red}) %(!.#.$)%f%b "
+
+# mia
+# PROMPT="%F{blue}%1~%f%b% "
+# PROMPT+="\$vcs_info_msg_0_"
+# PROMPT+="%B%(?.%F{grey}.%F{red}) %(!.#.$)%f%b "
 
 # minimal with :
 # PROMPT="%F{blue}%1~%f%b% "
 # PROMPT+="%{$reset_color%}:%: "
+#
+# PROMPT="%{$fg[yellow]%}%n%{$fg[green]%} @ %{$fg[blue]%}%M %{$fg[white]%}%(%{$fg[cyan]%}~"
+#
+zstyle ':vcs_info:git:*' formats "%{$fg[cyan]%}%m%u%c%{$fg[yellow]%}%b"
+PROMPT="%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M%{$fg[white]%}(%{$fg[red]%}%~%{$fg[white]%})"
+PROMPT+="%{$fg[white]%}["
+PROMPT+="\$vcs_info_msg_0_"
+PROMPT+="%{$fg[white]%}]
+"
+PROMPT+="%B%(?.%F{grey}.%F{red})%(!.#.$)%f%b "
