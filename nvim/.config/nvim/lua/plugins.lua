@@ -9,13 +9,15 @@ return require('packer').startup(function()
 		config = [[require('plugins/gruvbox')]]
 	}
 	use 'folke/tokyonight.nvim'
-
 	use 'chriskempson/base16-vim'
-
 	use "EdenEast/nightfox.nvim"
-
 	use 'shaunsingh/nord.nvim'
 	use 'dylanaraps/wal.vim'
+	use 'Deep-Six/pywal-lush'
+	use {'navarasu/onedark.nvim',
+		config = [[require('plugins/onedark')]]
+	}
+
 	-- telescope
 	use("nvim-lua/plenary.nvim")
 	use("nvim-lua/popup.nvim")
@@ -25,8 +27,8 @@ return require('packer').startup(function()
 	-- coments
 	use("tpope/vim-commentary")
 	-- bar
-	-- use("vim-airline/vim-airline")
-	-- use("vim-airline/vim-airline-themes")
+	use("vim-airline/vim-airline")
+	use("vim-airline/vim-airline-themes")
 	-- git
 	use("jreybert/vimagit")
 	-- distraction free

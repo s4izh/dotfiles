@@ -4,8 +4,7 @@
 # cbatticon -u 5 &
 # systray volume
 volumeicon &
-setxkbmap es
-setxkbmap -option caps:escape
+setxkbmap es -option caps:escape
 picom -b
-feh --bg-fill /home/s4izh/Pictures/bg/archnord.png
+feh --bg-fill /home/s4izh/pictures/system-wallpaper
 nm-applet &

@@ -2,13 +2,13 @@ local function map(m, k, v)
     vim.keymap.set(m, k, v, { noremap = false })
 end
 -- basic navigation
-map('n', '<C-h>', '<C-w>h')
-map('n', '<C-j>', '<C-w>j')
-map('n', '<C-k>', '<C-w>k')
-map('n', '<C-l>', '<C-w>l')
+-- map('n', '<C-h>', '<C-w>h')
+-- map('n', '<C-j>', '<C-w>j')
+-- map('n', '<C-k>', '<C-w>k')
+-- map('n', '<C-l>', '<C-w>l')
 
-map('n', '<leader>v', '<C-w>v')
-map('n', '<leader>c', '<C-w>c')
+-- map('n', '<leader>v', '<C-w>v')
+-- map('n', '<leader>c', '<C-w>c')
 
 -- behave like other capitals
 map("n", "Y", "y$")
@@ -57,5 +57,9 @@ map("n", "<Leader>gs", "<cmd>Gitsigns toggle_signs<cr>")
 map("n", "<Leader>la", "<cmd>LspStop<cr>")
 map("n", "<Leader>le", "<cmd>LspStart<cr>")
 
--- compile current md file into pdf
--- map("n", "<Leader>p", "<cmd>!pandoc %s")
+-- compile current file
+map("n", "<Leader>c", "<cmd>!compiler %<cr>")
+
+-- copy and paste to/from clipboard
+-- map("v", "<Leader>y", '<cmd>"+y<cr>')
+-- map("n", "<Leader>c", "<cmd>!compiler %<cr>")

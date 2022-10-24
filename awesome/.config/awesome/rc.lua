@@ -353,7 +353,7 @@ clientkeys = gears.table.join(
             c:raise()
         end,
         {description = "toggle fullscreen", group = "client"}),
-    awful.key({ modkey, "Shift"   }, "c",      function (c) c:kill()                         end,
+    awful.key({ modkey,           }, "q",      function (c) c:kill()                         end,
               {description = "close", group = "client"}),
     awful.key({ modkey, "Control" }, "space",  awful.client.floating.toggle                     ,
               {description = "toggle floating", group = "client"}),
@@ -437,6 +437,13 @@ for i = 1, 9 do
                       end
                   end,
                   {description = "toggle focused client on tag #" .. i, group = "tag"})
+		-- volume keys
+		-- awful.key({ }, "XF86AudioRaiseVolume", function ()
+       -- awful.util.spawn("amixer set Master 9%+") end),
+   -- awful.key({ }, "XF86AudioLowerVolume", function ()
+       -- awful.util.spawn("amixer set Master 9%-") end),
+   -- awful.key({ }, "XF86AudioMute", function ()
+       -- awful.util.spawn("amixer sset Master toggle") end),
     )
 end
 
@@ -584,7 +591,7 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 beautiful.useless_gap = 5
 
 -- Autostart
-awful.spawn.with_shell("feh --bg-fill ~/Pictures/system-wallpaper")
+awful.spawn.with_shell("feh --bg-fill ~/pictures/system-wallpaper")
 awful.spawn.with_shell("setxkbmap es -option caps:escape")
 -- awful.spawn.with_shell("picom -f")
 awful.spawn.with_shell("nm-applet")

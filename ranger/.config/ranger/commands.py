@@ -67,4 +67,4 @@ class set_wallpaper(Command):
         if self.arg(1):
             new_wallpaper = self.rest(1)
             os.system("feh --bg-fill " + new_wallpaper)
-            os.system("cp -f " + new_wallpaper + " ~/Pictures/system-wallpaper")
+            os.system("cp -f " + new_wallpaper + " ~/pictures/system-wallpaper")

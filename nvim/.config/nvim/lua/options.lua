@@ -47,3 +47,5 @@ o.updatetime = 50
 -- 	eol = '¬',
 -- 	trail = '·'
 -- }
+
+-- vim.api.nvim_command(au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif)
