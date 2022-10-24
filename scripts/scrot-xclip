@@ -1,0 +1,3 @@
+#!/bin/bash
+
+scrot -s '/home/s4izh/pictures/screenshots/%F_%T_$wx$h.png' -e 'xclip -selection clipboard -target image/png -i $f'
