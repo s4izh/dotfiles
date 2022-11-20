@@ -194,6 +194,7 @@ local config = {
 			{ "rmehri01/onenord.nvim" },
 			{ "shaunsingh/nord.nvim" },
 			{ "ellisonleao/gruvbox.nvim" },
+			{ "folke/tokyonight.nvim" },
 			-- You can also add new plugins here as well:
 			-- Add plugins, the packer syntax without the "use"
 			-- { "andweeb/presence.nvim" },
