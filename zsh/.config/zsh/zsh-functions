@@ -75,5 +75,10 @@ function fzf-lovely(){
 }
 
 function p() {
-    mupdf "$@" &
+    zathura "$@" &
+}
+
+function uni() {
+	cd ~/vault/uni/$1/
+	ranger
 }
