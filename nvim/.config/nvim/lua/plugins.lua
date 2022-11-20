@@ -14,6 +14,7 @@ return require('packer').startup(function()
 	use 'shaunsingh/nord.nvim'
 	use 'dylanaraps/wal.vim'
 	use 'Deep-Six/pywal-lush'
+	use { 'AlphaTechnolog/pywal.nvim', as = 'pywal' }
 	-- use {'navarasu/onedark.nvim',
 	-- 	config = [[require('plugins/onedark')]]
 	-- }
@@ -226,6 +227,6 @@ return require('packer').startup(function()
 	}
 
 	-- Debugging
-	use 'nvim-lua/plenary.nvim'
+	--use 'nvim-lua/plenary.nvim'
 	use 'mfussenegger/nvim-dap'
 end)
