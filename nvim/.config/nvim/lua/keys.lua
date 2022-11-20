@@ -60,6 +60,12 @@ map("n", "<Leader>le", "<cmd>LspStart<cr>")
 -- compile current file
 map("n", "<Leader>c", "<cmd>!compiler %<cr>")
 
+-- set colors
+map("n", "<Leader>xt", "<cmd>colo tokyonight-night<cr>")
+
 -- copy and paste to/from clipboard
 -- map("v", "<Leader>y", '<cmd>"+y<cr>')
 -- map("n", "<Leader>c", "<cmd>!compiler %<cr>")
+--
+-- rust formatting
+map("n", "<Leader>lf", "<cmd>!rustfmt %<cr>")

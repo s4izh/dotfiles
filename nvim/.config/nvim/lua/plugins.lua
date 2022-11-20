@@ -14,9 +14,11 @@ return require('packer').startup(function()
 	use 'shaunsingh/nord.nvim'
 	use 'dylanaraps/wal.vim'
 	use 'Deep-Six/pywal-lush'
-	use {'navarasu/onedark.nvim',
-		config = [[require('plugins/onedark')]]
-	}
+	-- use {'navarasu/onedark.nvim',
+	-- 	config = [[require('plugins/onedark')]]
+	-- }
+	use 'sainnhe/everforest'
+	use 'Mofiqul/vscode.nvim'
 
 	-- telescope
 	use("nvim-lua/plenary.nvim")
@@ -27,8 +29,8 @@ return require('packer').startup(function()
 	-- coments
 	use("tpope/vim-commentary")
 	-- bar
-	use("vim-airline/vim-airline")
-	use("vim-airline/vim-airline-themes")
+	-- use("vim-airline/vim-airline")
+	-- use("vim-airline/vim-airline-themes")
 	-- git
 	use("jreybert/vimagit")
 	-- distraction free
@@ -140,6 +142,21 @@ return require('packer').startup(function()
       config = [[ require('plugins/formatter') ]]
     }
 
+	-- use {
+	-- 	'akinsho/bufferline.nvim',
+	-- 	tag = "v3.*",
+	-- 	requires = 'kyazdani42/nvim-web-devicons',
+      	-- config = [[ require('plugins/bufferline') ]]
+	-- }
+	-- use({
+    -- 'noib3/nvim-cokeline',
+    -- requires = 'kyazdani42/nvim-web-devicons', -- If you want devicons
+    -- config = function()
+      -- require('cokeline').setup()
+    -- end
+  	-- })
+
+
     -- use {
     --   "nvim-telescope/telescope-project.nvim"
     -- }
@@ -203,4 +220,12 @@ return require('packer').startup(function()
 	-- use("simrat39/symbols-outline.nvim")
 	-- use("L3MON4D3/LuaSnip")
 	-- use("saadparwaiz1/cmp_luasnip")
+	--
+	use {'simrat39/rust-tools.nvim',
+		config = function() require('rust-tools').setup() end
+	}
+
+	-- Debugging
+	use 'nvim-lua/plenary.nvim'
+	use 'mfussenegger/nvim-dap'
 end)
