@@ -13,7 +13,7 @@ case "$ext" in
 	cpp) 	g++ "$file" -o "$base" && "$base" ;;
 	java) 	javac -d classes "$file" && java -cp classes "${1%.*}" ;;
 	md)		pandoc "$file" -o "$base".pdf ;;
-	rs) 	cargo build ;;
+	rs) 	cargo run ;;
 	tex) 	pdflatex "$file";;
 	default) exit ;;
 esac
