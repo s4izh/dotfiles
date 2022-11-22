@@ -1,0 +1,17 @@
+super + p
+	dmenu_run
+
+super + u: {k,m,s}
+	{dmenukblayout, dmenumonitor, dmenusys}
+
+XF86AudioRaiseVolume
+	/usr/bin/pactl set-sink-volume @DEFAULT_SINK +5%
+
+XF86AudioLowerVolume
+	/usr/bin/pactl set-sink-volume @DEFAULT_SINK -5%
+
+XF86AudioMute
+	/usr/bin/pactl set-sink-mute @DEFAULT_SINK -5%
+
+Print
+	scrot-xclip

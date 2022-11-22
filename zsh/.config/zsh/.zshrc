@@ -3,7 +3,7 @@ export ZDOTDIR=$HOME/.config/zsh
 # HISTFILE=~/.zsh_history
 setopt appendhistory
 
-PATH=/root/.local/bin:/snap/bin:/usr/sandbox/:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/share/games:/usr/local/sbin:/usr/sbin:/sbin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/home/s4izh/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl
+#PATH=/root/.local/bin:/snap/bin:/usr/sandbox/:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/share/games:/usr/local/sbin:/usr/sbin:/sbin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/home/s4izh/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl
 
 # some useful options (man zshoptions)
 setopt extendedglob nomatch menucomplete
@@ -53,9 +53,9 @@ bindkey -s '^o' 'ranger^M'
 bindkey -s '^a' 'tmux at -t 0^M'
 #bindkey -s '^f' 'zi^M'
 #bindkey -s '^s' 'ncdu^M'
-bindkey -s '^y' 'nvim index*\n'
-bindkey -s '^n' 'nvim $(fzf)^M'
-bindkey -s '^v' 'nvim .\n'
+#bindkey -s '^y' 'nvim index*\n'
+#bindkey -s '^n' 'nvim $(fzf)^M'
+#bindkey -s '^v' 'nvim .\n'
 #bindkey -s '^z' 'zi^M'
 #bindkey '^[[P' delete-char
 #bindkey "^p" up-line-or-beginning-search # Up
