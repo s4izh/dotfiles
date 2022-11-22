@@ -1,0 +1,10 @@
+#!/bin/bash
+
+wal=$(readlink -f "$1")
+
+wal -i $wal
+sed -i 'N;$!P;D' $HOME/.cache/wal/colors-wal-dwm.h
+
+(cd $HOME/.local/src/dwm && sudo make clean install)
+
+alacritty-pywall $HOME/.config/alacritty/themes/pywal.yml
