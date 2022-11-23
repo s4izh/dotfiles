@@ -14,10 +14,16 @@ XF86AudioMute
 	/usr/bin/pactl set-sink-mute @DEFAULT_SINK -5%
 
 Print
-	scrot-xclip
+	maim-ss
 
 XF86MonBrightnessUp
 	brightnessctl set +10%
 
 XF86MonBrightnessDown
 	brightnessctl set 10%
+
+super + n
+	redshift -O 5000
+
+super + shift + n
+	redshift -x
