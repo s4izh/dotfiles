@@ -6,12 +6,16 @@ alias qtilecf='cd ~/.config/qtile && nvim .'
 alias i3cf='cd ~/.config/i3 && nvim config'
 
 # Manual aliases
-alias ll='lsd -lh --group-dirs=first'
-alias la='lsd -a --group-dirs=first'
-alias l='lsd --group-dirs=first'
-alias lla='lsd -lha --group-dirs=first'
-alias ls='lsd --group-dirs=first'
-alias cat='bat'
+# alias ll='lsd -lh --group-dirs=first'
+# alias la='lsd -a --group-dirs=first'
+# alias l='lsd --group-dirs=first'
+# alias lla='lsd -lha --group-dirs=first'
+# alias ls='lsd --group-dirs=first'
+alias ll='ls -lh --color=auto'
+alias la='ls -a --color=auto'
+alias lla='lsd -lha --color=auto'
+alias ls='ls --color=auto'
+# alias cat='bat'
 
 alias v='nvim'
 
