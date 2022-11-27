@@ -1,8 +1,9 @@
 super + p
 	dmenu_run
 
-super + u: {k,m,s}
-	{dmenukblayout, dmenumonitor, dmenusys}
+super + u: {k,m,s,l,r,c}
+	{dmenukblayout, dmenumonitor, dmenusys, dmenuopgg, dmenuraco, dmenuconfig}
+    exit
 
 XF86AudioRaiseVolume
 	/usr/bin/pactl set-sink-volume @DEFAULT_SINK +5%
