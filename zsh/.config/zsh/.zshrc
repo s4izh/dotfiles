@@ -61,7 +61,7 @@ compinit
 
 # Environment variables set everywhere
 export EDITOR="nvim"
-export TERMINAL="alacritty"
+# export TERMINAL="alacritty"
 export BROWSER="firefox"
 export BAT_THEME="gruvbox-dark"
 
