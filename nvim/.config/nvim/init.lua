@@ -1,16 +1,23 @@
---binding vim.g.mapleader = " "
--- vim.o.relativenumber = true
--- vim.o.nsumber = true
+-- [[ init.lua ]] --
 
--- vim.cmd("colorscheme gruvbox")
-vim.g.mapleader = " "
+vim.g.mapleader=" "
 
--- require "settings.options"
--- require "settings.keys"
-
--- require "packer-plug"
-
-require('plugins')
-require('options')
+require('vars')
+require('opts')
 require('keys')
+require('plug')
+
+-- general plugin conf
+require('plugins/conf')
+
+-- specific plugin conf
+require('plugins/lsp')
+require('plugins/cmp')
+require('plugins/treesitter')
+-- require('plugins/snippets')
+
+-- vim.cmd("set signcolumn=no")
+
+
 require('colorscheme')
+-- vim.cmd("set background=light")

@@ -1,0 +1,45 @@
+#!/bin/bash
+CHOICE=$(echo -e "dracula\neverforest\ngruvbox\nnord\npywal\nrose-pine\ntokyonight" | dmenu -p theme:)
+
+ALACRITTY_DIR=~/.config/alacritty
+NVIM_DIR=~/.config/nvim
+
+case "$CHOICE" in
+    'dracula')
+        NVIM_THEME=dracula
+        ALACRITTY_THEME=dracula
+    ;;
+    'gruvbox')
+        NVIM_THEME=gruvbox
+        ALACRITTY_THEME=gruvbox
+    ;;
+    'tokyonight')
+        NVIM_THEME=tokyonight-night
+        ALACRITTY_THEME=tokyo-night
+    ;;
+    'everforest')
+        NVIM_THEME=everforest
+        ALACRITTY_THEME=everforest
+    ;;
+    'nord')
+        NVIM_THEME=nord
+        ALACRITTY_THEME=nord
+    ;;
+    'pywal')
+        NVIM_THEME=wal
+        ALACRITTY_THEME=pywal
+    ;;
+    'rose-pine')
+        NVIM_THEME=rose-pine
+        ALACRITTY_THEME=rose-pine
+    ;;
+esac
+
+if [ -n $CHOICE ]; then
+    color="vim.cmd(\"colorscheme $NVIM_THEME\")"
+    echo $color > $NVIM_DIR/lua/colorscheme.lua
+    if [ -n $ALACRITTY_DIR/current-theme.yml ]; then
+        rm $ALACRITTY_DIR/current-theme.yml
+    fi
+    ln -s $ALACRITTY_DIR/themes/$ALACRITTY_THEME.yml $ALACRITTY_DIR/current-theme.yml
+fi
