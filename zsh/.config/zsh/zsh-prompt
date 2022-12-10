@@ -65,14 +65,18 @@ zstyle ':vcs_info:*' check-for-changes true
 # PROMPT+="%{$reset_color%}$%b "
 
 # luke style
+# [user@host ~]$
 # PROMPT="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[cyan]%}%~"
 # PROMPT+="%{$fg[red]%}]%{$reset_color%}$%b "
 
 # luke style no []
+# user@host ~ $
 # PROMPT="%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[cyan]%}%~"
 # PROMPT+=" %{$reset_color%}$%b "
 
 # gerry style
+# user[host] ~ *git
+# $
 PROMPT="%F{yellow}%n%F{green}[%m] %F{blue}%~%f%b% "
 zstyle ':vcs_info:git:*' formats " %{$fg[magenta]%}*%{$fg[magenta]%}%b"
 PROMPT+="\$vcs_info_msg_0_"
