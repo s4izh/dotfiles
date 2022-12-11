@@ -21,7 +21,7 @@ opt.signcolumn = "yes"
 -- # Theme
 
 opt.syntax = "ON"
-opt.termguicolors = true -- disable to use pywal
+opt.termguicolors = false -- disable to use pywal
 
 -- # Search
 

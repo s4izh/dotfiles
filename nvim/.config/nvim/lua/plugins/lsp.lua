@@ -2,22 +2,22 @@
 
 require("mason").setup()
 require("mason-lspconfig").setup({
-    ensure_installed = { "sumneko_lua", "rust_analyzer" , "clangd" , "pyright" }
+    ensure_installed = { "sumneko_lua", "rust_analyzer", "clangd", "pyright" }
 })
 
--- LSP Diagnostics Options Setup 
+-- LSP Diagnostics Options Setup
 local sign = function(opts)
-  vim.fn.sign_define(opts.name, {
-    texthl = opts.name,
-    text = opts.text,
-    numhl = ''
-  })
+    vim.fn.sign_define(opts.name, {
+        texthl = opts.name,
+        text = opts.text,
+        numhl = ''
+    })
 end
 
-sign({name = 'DiagnosticSignError', text = ''})
-sign({name = 'DiagnosticSignWarn', text = ''})
-sign({name = 'DiagnosticSignHint', text = ''})
-sign({name = 'DiagnosticSignInfo', text = ''})
+sign({ name = 'DiagnosticSignError', text = '' })
+sign({ name = 'DiagnosticSignWarn', text = '' })
+sign({ name = 'DiagnosticSignHint', text = '' })
+sign({ name = 'DiagnosticSignInfo', text = '' })
 
 vim.diagnostic.config({
     virtual_text = true,
@@ -37,77 +37,82 @@ autocmd CursorHold * lua vim.diagnostic.open_float(nil, { focusable = false })
 local rt = require("rust-tools")
 
 rt.setup({
-  server = {
-    on_attach = function(_, bufnr)
-      -- Hover actions
-      -- vim.keymap.set("n", "<Leader>i", rt.hover_actions.hover_actions, { buffer = bufnr })
-      -- vim.keymap.set("n", "<Leader>i", {rt.hover_actions.hover_actions & vim.cmd("<C-w>w")}, { buffer = bufnr })
-      -- Code action groups
-      -- vim.keymap.set("n", "<Leader>a", rt.code_action_group.code_action_group, { buffer = bufnr })
-    end,
-  },
+    server = {
+        on_attach = function(_, bufnr)
+            -- Hover actions
+            -- vim.keymap.set("n", "<Leader>i", rt.hover_actions.hover_actions, { buffer = bufnr })
+            -- vim.keymap.set("n", "<Leader>i", {rt.hover_actions.hover_actions & vim.cmd("<C-w>w")}, { buffer = bufnr })
+            -- Code action groups
+            -- vim.keymap.set("n", "<Leader>a", rt.code_action_group.code_action_group, { buffer = bufnr })
+        end,
+    },
 })
 
 -- python
-require'lspconfig'.pyright.setup{
+require 'lspconfig'.pyright.setup {
     on_attach = on_attach
 }
 
 -- c
-require'lspconfig'.clangd.setup{
+require 'lspconfig'.clangd.setup {
     on_attach = on_attach
 }
 
 -- lua
-require'lspconfig'.sumneko_lua.setup{
+require 'lspconfig'.sumneko_lua.setup {
     on_attach = on_attach
 }
 
 -- require'lspconfig'.jdtls.setup{
---     on_attach = on_attach 
+--     on_attach = on_attach
 -- }
 
 -- keybinds
 
 vim.api.nvim_create_autocmd('LspAttach', {
-  desc = 'LSP actions',
-  callback = function()
-    local bufmap = function(mode, lhs, rhs)
-      local opts = {buffer = true}
-      vim.keymap.set(mode, lhs, rhs, opts)
-    end
+    desc = 'LSP actions',
+    callback = function()
+        local bufmap = function(mode, lhs, rhs)
+            local opts = { buffer = true }
+            vim.keymap.set(mode, lhs, rhs, opts)
+        end
 
-    -- Displays hover information about the symbol under the cursor
-    bufmap('n', 'K', '<cmd>lua vim.lsp.buf.hover()<cr>')
+        -- Displays hover information about the symbol under the cursor
+        bufmap('n', 'K', '<cmd>lua vim.lsp.buf.hover()<cr>')
 
-    -- Jump to the definition
-    bufmap('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<cr>')
+        -- Jump to the definition
+        bufmap('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<cr>')
 
-    -- Jump to declaration
-    bufmap('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<cr>')
+        -- Jump to declaration
+        bufmap('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<cr>')
 
-    -- Lists all the implementations for the symbol under the cursor
-    bufmap('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<cr>')
+        -- Lists all the implementations for the symbol under the cursor
+        bufmap('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<cr>')
 
-    -- Jumps to the definition of the type symbol
-    bufmap('n', 'go', '<cmd>lua vim.lsp.buf.type_definition()<cr>')
+        -- Jumps to the definition of the type symbol
+        bufmap('n', 'go', '<cmd>lua vim.lsp.buf.type_definition()<cr>')
 
-    -- Lists all the references 
-    bufmap('n', 'gu', '<cmd>lua vim.lsp.buf.references()<cr>')
+        -- Lists all the references
+        bufmap('n', 'gu', '<cmd>lua vim.lsp.buf.references()<cr>')
 
-    -- Displays a function's signature information
-    bufmap('n', '<Leader>i', '<cmd>lua vim.lsp.buf.signature_help()<cr>')
+        -- Displays a function's signature information
+        bufmap('n', '<Leader>i', '<cmd>lua vim.lsp.buf.signature_help()<cr>')
 
-    -- Renames all references to the symbol under the cursor
-    bufmap('n', '<Leader>ce', '<cmd>lua vim.lsp.buf.rename()<cr>')
+        -- Renames all references to the symbol under the cursor
+        bufmap('n', '<Leader>ce', '<cmd>lua vim.lsp.buf.rename()<cr>')
 
-    -- Selects a code action available at the current cursor position
-    bufmap('n', '<Leader>a', '<cmd>lua vim.lsp.buf.code_action()<cr>')
+        -- Selects a code action available at the current cursor position
+        bufmap('n', '<Leader>a', '<cmd>lua vim.lsp.buf.code_action()<cr>')
 
-    -- Move to the previous diagnostic
-    bufmap('n', 'g,', '<cmd>lua vim.diagnostic.goto_prev()<cr>')
+        -- Move to the previous diagnostic
+        bufmap('n', 'g,', '<cmd>lua vim.diagnostic.goto_prev()<cr>')
 
-    -- Move to the next diagnostic
-    bufmap('n', 'g.', '<cmd>lua vim.diagnostic.goto_next()<cr>')
+        -- Move to the next diagnostic
+        bufmap('n', 'g.', '<cmd>lua vim.diagnostic.goto_next()<cr>')
+
+        -- format code
+        bufmap('n', '<Leader>lf', '<cmd>lua vim.lsp.buf.formatting_sync()<cr>')
     end
 })
+
+-- vim.cmd [[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()]]

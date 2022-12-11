@@ -1,6 +1,6 @@
 -- [[ init.lua ]] --
 
-vim.g.mapleader=" "
+vim.g.mapleader = " "
 
 require('vars')
 require('opts')
