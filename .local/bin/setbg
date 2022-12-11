@@ -1,6 +1,7 @@
 #!/bin/bash
 
-wal=$(readlink -f "$1")
+# wal=$(readlink -f "$1")
+wal=$(realpath "$1")
 
 wal -i $wal
 sed -i 'N;$!P;D' $HOME/.cache/wal/colors-wal-dwm.h
