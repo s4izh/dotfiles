@@ -87,11 +87,35 @@ function cdf() {
     cd "$(find -type d | fzf)"
 }
 
-function open() {
+function openf() {
     xdg-open "$(find -type f | fzf)"
+}
+
+function open() {
+    xdg-open $1 &
 }
 
 function edsc() {
     cd ~/.local/bin/
-    nvim $(fzf)
+    nvim $(ls ~/.local/bin | fzf)
 }
+
+function dwmc() {
+    cd ~/.local/src/dwm
+    sudo ./compile.sh
+}
+
+function chedit() {
+    nvim ~/.local/share/cheat/$1
+}
+
+function vif() {
+    local fname
+    local current_dir=$PWD
+    cd ~/.dotfiles
+    fname=$(fzf) || return
+    vim "$fname"
+    cd $current_dir
+}
+# https://jdhao.github.io/2019/06/13/zsh_bind_keys/
+bindkey -s '^o' 'vif^M'

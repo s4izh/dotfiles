@@ -13,7 +13,7 @@ return require('packer').startup(function()
     use 'navarasu/onedark.nvim'
     use({ 'rose-pine/neovim', as = 'rose-pine' })
     use 'shaunsingh/nord.nvim'
-
+    -------------------------------------------
     -- nerd tree
     use {
 		"nvim-neo-tree/neo-tree.nvim",
@@ -24,26 +24,20 @@ return require('packer').startup(function()
 			"MunifTanjim/nui.nvim",
 		}
 	}
-
-
     -- autopairs
     use {
 	    'windwp/nvim-autopairs',
         config = function() require('nvim-autopairs').setup {} end
     }
-
     -------------------------------------------
-
     -- lsp
     use {
         'williamboman/mason.nvim',
         'williamboman/mason-lspconfig.nvim',
         'neovim/nvim-lspconfig',
     }
-
     -- rust
     use 'simrat39/rust-tools.nvim'
-
     use {
         "folke/trouble.nvim",
         requires = "kyazdani42/nvim-web-devicons",
@@ -55,15 +49,11 @@ return require('packer').startup(function()
         }
     end
     }
-
     -------------------------------------------
-
     -- completions
     use 'hrsh7th/nvim-cmp'
-
     -- LSP completion source:
     use 'hrsh7th/cmp-nvim-lsp'
-
     -- Useful completion sources:
     use 'hrsh7th/cmp-nvim-lua'
     use 'hrsh7th/cmp-nvim-lsp-signature-help'
@@ -71,19 +61,13 @@ return require('packer').startup(function()
     use 'hrsh7th/cmp-path'
     use 'hrsh7th/cmp-buffer'
     use "saadparwaiz1/cmp_luasnip" -- luasnip completion source for nvim-cmp
-
-
     use {
         'L3MON4D3/LuaSnip',
         after = 'nvim-cmp',
         -- config = function() require('config.snippets') end,
     }
-
-
     use 'onsails/lspkind.nvim'
-
     use 'rafamadriz/friendly-snippets'
-
     -------------------------------------------
 
     -- treesitter
@@ -96,7 +80,7 @@ return require('packer').startup(function()
     }
 
     -- tagbar
-    use { 'majutsushi/tagbar'}
+    -- use { 'majutsushi/tagbar'}
 
     -- commentaries
 	use{ 'tpope/vim-commentary' }

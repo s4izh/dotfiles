@@ -12,16 +12,17 @@ opt.relativenumber = true
 opt.scrolloff = 4
 opt.signcolumn = "yes"
 
--- # Filetypes
+-- disable autocomment on next line
+vim.cmd[[
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+]]
 
 -- opt.encoding = 'utf8'     -- String encoding to use
 -- opt.fileencoding = 'utf8' -- File encoding to use
 
 
--- # Theme
-
 opt.syntax = "ON"
-opt.termguicolors = false -- disable to use pywal
+-- opt.termguicolors = false -- disable to use pywal
 
 -- # Search
 
@@ -30,26 +31,18 @@ opt.smartcase = true  -- Override ignorecase if search contains capitals
 opt.incsearch = true  -- Use incremental search
 opt.hlsearch = false  -- Highlight search matches
 
-
--- # Whitespace
-
 opt.expandtab = true -- Use spaces instead of tabs
 opt.shiftwidth = 4   -- Size of an indent
 opt.softtabstop = 4  -- Number of spaces tabs count for in insert mode
 opt.tabstop = 4      -- Number of spaces tabs count for
 
--- # Splits
- 
 opt.splitright = true -- Place new window to right of current one
 opt.splitbelow = true -- Place new window below the current one
-
 
 -- wrap lines
 o.wrap = false
 -- mouse mode on
 o.mouse = "a"
-
--- # Completion
 
 --Set completeopt to have a better completion experience
 -- :help completeopt

@@ -93,13 +93,13 @@ vim.api.nvim_create_autocmd('LspAttach', {
         bufmap('n', 'go', '<cmd>lua vim.lsp.buf.type_definition()<cr>')
 
         -- Lists all the references
-        bufmap('n', 'gu', '<cmd>lua vim.lsp.buf.references()<cr>')
+        bufmap('n', 'gr', '<cmd>lua vim.lsp.buf.references()<cr>')
 
         -- Displays a function's signature information
         bufmap('n', '<Leader>i', '<cmd>lua vim.lsp.buf.signature_help()<cr>')
 
         -- Renames all references to the symbol under the cursor
-        bufmap('n', '<Leader>ce', '<cmd>lua vim.lsp.buf.rename()<cr>')
+        bufmap('n', '<F2>', '<cmd>lua vim.lsp.buf.rename()<cr>')
 
         -- Selects a code action available at the current cursor position
         bufmap('n', '<Leader>a', '<cmd>lua vim.lsp.buf.code_action()<cr>')
@@ -111,7 +111,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
         bufmap('n', 'g.', '<cmd>lua vim.diagnostic.goto_next()<cr>')
 
         -- format code
-        bufmap('n', '<Leader>lf', '<cmd>lua vim.lsp.buf.formatting_sync()<cr>')
+        bufmap('n', '<Leader>lf', '<cmd>lua vim.lsp.buf.format()<cr>')
     end
 })
 
