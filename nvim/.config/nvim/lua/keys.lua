@@ -31,3 +31,11 @@ map("n", "<Leader><Leader>r", "<cmd>luafile %<cr>", {})
 
 -- compile current file
 map("n", "<Leader>c", ":w | !compiler %<cr>", {})
+
+vim.cmd[[
+    nnoremap S :%s//g<Left><Left>
+]]
+
+vim.cmd[[
+    vnoremap S :s//g<Left><Left>
+]]

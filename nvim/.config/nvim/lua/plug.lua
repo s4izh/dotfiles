@@ -90,23 +90,12 @@ return require('packer').startup(function()
 		'lewis6991/gitsigns.nvim', requires = { 'nvim-lua/plenary.nvim' },
 		config = function() require('gitsigns').setup() end
 	}
+    -- lightline
+    use 'itchyny/lightline.vim'
 
-    -- lualine
-    -- use {
-    --     'nvim-lualine/lualine.nvim',
-    --     requires = { 'kyazdani42/nvim-web-devicons', opt = true },
-    -- }   
-
-    --- iluminate other uses
-    -- use 'RRethy/vim-illuminate'
-
-	-- use {
-	-- 	"norcalli/nvim-colorizer.lua",
-	-- 	config = function() require('colorizer').setup() end,
-	-- }
-
-    -- cursor line
-	-- use("yamatsum/nvim-cursorline")
-
+    -- vimwiki
+    use 'vimwiki/vimwiki'
+    -- use 'tools-life/taskwiki'
+    use 'preservim/vim-markdown'
 
 end)
