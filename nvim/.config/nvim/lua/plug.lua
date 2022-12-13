@@ -97,5 +97,7 @@ return require('packer').startup(function()
     use 'vimwiki/vimwiki'
     -- use 'tools-life/taskwiki'
     use 'preservim/vim-markdown'
+    use 'junegunn/goyo.vim'
+    use 'junegunn/limelight.vim'
 
 end)

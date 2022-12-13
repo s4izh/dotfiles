@@ -32,6 +32,11 @@ map("n", "<Leader><Leader>r", "<cmd>luafile %<cr>", {})
 -- compile current file
 map("n", "<Leader>c", ":w | !compiler %<cr>", {})
 
+-- goyo
+map("n", "<Leader>z", "<cmd>Goyo<cr>", {})
+
+map("n", "<Leader>ml", ":Limelight", {})
+
 vim.cmd[[
     nnoremap S :%s//g<Left><Left>
 ]]

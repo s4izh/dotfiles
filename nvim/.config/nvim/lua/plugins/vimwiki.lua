@@ -16,9 +16,15 @@ vim.cmd [[
 -- ]]
 
 vim.cmd [[
-    let g:markdown_folding = 0
+    let g:markdown_folding = 1
 ]]
 
 vim.cmd [[
-    let g:vim_markdown_folding_disabled = 1
+    let g:vim_markdown_folding_disabled = 0
 ]]
+
+vim.cmd[[
+    let g:limelight_conceal_ctermfg=244
+]]
+
+
