@@ -4,7 +4,8 @@ return require('packer').startup(function()
 	use 'wbthomason/packer.nvim'
 
     -- colorscheme
-    use 'ellisonleao/gruvbox.nvim'
+    -- use 'ellisonleao/gruvbox.nvim'
+    use 'morhetz/gruvbox'
     use 'folke/tokyonight.nvim'
     use 'tanvirtin/monokai.nvim'
    	use 'sainnhe/everforest'
@@ -92,6 +93,8 @@ return require('packer').startup(function()
 	}
     -- lightline
     use 'itchyny/lightline.vim'
+
+    use 'norcalli/nvim-colorizer.lua'
 
     -- vimwiki
     use 'vimwiki/vimwiki'
