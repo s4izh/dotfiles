@@ -1,0 +1,13 @@
+#!/bin/bash
+
+asignatura=$(ls "$HOME"/uni | dmenu -p "asignatura")
+
+file=$(find $HOME/uni/$asignatura -type f -name "*.pdf" | \
+    sed "s~${HOME}/uni/${asignatura}~~g" | dmenu -l 30)
+
+echo $file
+
+if [ -n "$file" ]; then
+    xdg-open "$HOME/uni/$asignatura/$file"
+fi
+

@@ -1,0 +1,8 @@
+#!/bin/bash
+
+filename=$(dmenu -p "Enter a file name for the screenshot:")
+
+maim -s "$HOME/vimwiki/notes/img/$filename.png"
+
+echo "img/$filename.png" | xclip -selection clipboard
+

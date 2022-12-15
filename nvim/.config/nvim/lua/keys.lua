@@ -39,7 +39,7 @@ map("n", "<Leader>ml", ":Limelight", {})
 
 map("n", "<Leader>o", ":!xdg-open <c-r><c-p> &<cr>", {})
 
-map("n", "<Leader>wb", ":!python3 ~/vimwiki/notes/backlinks.py %<cr>", {})
+map("n", "<Leader>wb", ":!python3 ~/vimwiki/scripts/backlinks.py %<cr>", {})
 
 vim.cmd[[
     nnoremap S :%s//g<Left><Left>

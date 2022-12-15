@@ -2,9 +2,11 @@ vim.cmd [[
     let g:vimwiki_list = [{'path':'~/vimwiki/notes', 'syntax':'markdown', 'ext': '.md'}]
 ]]
 
-vim.cmd [[
-    let g:vimwiki_ext2syntax = {'.md':'markdown', '.markdown':'markdown', '.mdown': 'markdown'}
-]]
+-- let g:vimwiki_list = [{'path':'~/vimwiki/notes', 'syntax':'markdown', 'ext': '.md'}]
+
+-- vim.cmd [[
+--     let g:vimwiki_ext2syntax = {'.md':'markdown', '.markdown':'markdown', '.mdown': 'markdown'}
+-- ]]
 
 -- makes links as [file](file.md) instead of [file](file)
 vim.cmd [[
