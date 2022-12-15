@@ -2,7 +2,7 @@ local o = vim.o
 local opt = vim.opt
 local cmd = vim.cmd
 
-opt.colorcolumn = '80'
+-- opt.colorcolumn = '80'
 opt.number = true
 opt.relativenumber = true
 opt.scrolloff = 4

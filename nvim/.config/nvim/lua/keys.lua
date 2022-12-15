@@ -37,7 +37,7 @@ map("n", "<Leader>z", "<cmd>Goyo<cr>", {})
 
 map("n", "<Leader>ml", ":Limelight", {})
 
-map("n", "<Leader>o", ":!zathura <c-r><c-p> &<cr>", {})
+map("n", "<Leader>o", ":!xdg-open <c-r><c-p> &<cr>", {})
 
 map("n", "<Leader>wb", ":!python3 ~/vimwiki/notes/backlinks.py %<cr>", {})
 

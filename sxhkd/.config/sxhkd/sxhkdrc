@@ -1,6 +1,3 @@
-super + p
-	dmenu_run
-
 super + w
     firefox
 
