@@ -1,12 +1,8 @@
--- # opts.lua
-
 local o = vim.o
 local opt = vim.opt
 local cmd = vim.cmd
 
--- # Context
-
--- opt.colorcolumn = '80'
+opt.colorcolumn = '80'
 opt.number = true
 opt.relativenumber = true
 opt.scrolloff = 4
@@ -59,8 +55,8 @@ vim.api.nvim_set_option('updatetime', 300)
 -- Show autodiagnostic popup on cursor hover_range
 -- Goto previous / next diagnostic warning / error 
 -- Show inlay_hints more frequently 
+-- set signcolumn=yes
 vim.cmd([[
-set signcolumn=yes
 autocmd CursorHold * lua vim.diagnostic.open_float(nil, { focusable = false })
 ]])
 

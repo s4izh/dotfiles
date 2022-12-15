@@ -102,5 +102,14 @@ return require('packer').startup(function()
     use 'preservim/vim-markdown'
     use 'junegunn/goyo.vim'
     use 'junegunn/limelight.vim'
+    -- no va :(
+    -- use 'fwalch/zathura.vim'
+    -- use 'arp242/xdg_open.vim'
+
+    -- table mode
+    use 'dhruvasagar/vim-table-mode'
+
+    -- easy align
+    use 'junegunn/vim-easy-align'
 
 end)

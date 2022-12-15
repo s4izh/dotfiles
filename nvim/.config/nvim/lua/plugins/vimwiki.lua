@@ -1,5 +1,5 @@
 vim.cmd [[
-    let g:vimwiki_list = [{'path':'~/notes', 'syntax':'markdown', 'ext': '.md'}]
+    let g:vimwiki_list = [{'path':'~/vimwiki/notes', 'syntax':'markdown', 'ext': '.md'}]
 ]]
 
 vim.cmd [[
@@ -27,4 +27,10 @@ vim.cmd[[
     let g:limelight_conceal_ctermfg=244
 ]]
 
+vim.cmd[[
+    let g:vim_markdown_fenced_languages = ['c++=cpp', 'viml=vim', 'bash=sh', 'ini=dosini']
+]]
 
+vim.cmd[[
+    let g:vim_markdown_conceal_code_blocks = 0
+]]

@@ -110,6 +110,9 @@ vim.api.nvim_create_autocmd('LspAttach', {
         -- Move to the next diagnostic
         bufmap('n', 'g.', '<cmd>lua vim.diagnostic.goto_next()<cr>')
 
+        -- Move to the next diagnostic
+        -- bufmap('n', '<Leader>k', '<cmd>lua vim.diagnostic.open_float()<cr>')
+
         -- format code
         bufmap('n', '<Leader>lf', '<cmd>lua vim.lsp.buf.format()<cr>')
     end

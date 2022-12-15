@@ -1,5 +1,5 @@
 -- [[ init.lua ]] --
-vim.opt.termguicolors = true -- disable to use pywal
+-- vim.opt.termguicolors = true -- disable to use pywal
 
 vim.g.mapleader = " "
 
@@ -21,7 +21,8 @@ require('plugins/vimwiki')
 vim.cmd("set signcolumn=no")
 
 require('colorscheme')
-vim.cmd("set background=dark")
+-- vim.cmd("set background=light")
+
 -- vim.cmd[[
 --     let g:gruvbox_contrast_dark='soft'
 -- ]]

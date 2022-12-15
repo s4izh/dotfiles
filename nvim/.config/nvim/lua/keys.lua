@@ -37,6 +37,10 @@ map("n", "<Leader>z", "<cmd>Goyo<cr>", {})
 
 map("n", "<Leader>ml", ":Limelight", {})
 
+map("n", "<Leader>o", ":!zathura <c-r><c-p> &<cr>", {})
+
+map("n", "<Leader>wb", ":!python3 ~/vimwiki/notes/backlinks.py %<cr>", {})
+
 vim.cmd[[
     nnoremap S :%s//g<Left><Left>
 ]]
@@ -44,3 +48,13 @@ vim.cmd[[
 vim.cmd[[
     vnoremap S :s//g<Left><Left>
 ]]
+
+-- " Start interactive EasyAlign in visual mode (e.g. vipga)
+-- xmap ga <Plug>(EasyAlign)
+
+map("v", "ga", ":EasyAlign", {})
+
+
+-- " Start interactive EasyAlign for a motion/text object (e.g. gaip)
+-- nmap ga <Plug>(EasyAlign)
+

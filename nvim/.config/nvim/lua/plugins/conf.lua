@@ -1,6 +1,6 @@
 -- # Plugin Configs
 
-require'colorizer'.setup()
+-- require'colorizer'.setup()
 
 -- file-tree
 
