@@ -34,3 +34,5 @@ super + n
 super + shift + n
 	redshift -x
 
+super + alt + s
+    feh --bg-fill $(find ~/pix/wall -type f | shuf -n 1)
