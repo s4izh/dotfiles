@@ -119,3 +119,8 @@ function vif() {
 }
 # https://jdhao.github.io/2019/06/13/zsh_bind_keys/
 bindkey -s '^o' 'vif^M'
+
+function wk() {
+    cd ~/vimwiki/notes/
+    nvim $(fzf)
+}
