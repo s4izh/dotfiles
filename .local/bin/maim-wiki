@@ -1,8 +1,6 @@
 #!/bin/bash
 
-filename=$(dmenu -p "Enter a file name for the screenshot:")
+filename=$(dmenu -p "[wiki sc] name:")
 
 maim -s "$HOME/vimwiki/notes/img/$filename.png"
-
 echo "img/$filename.png" | xclip -selection clipboard
-

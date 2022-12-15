@@ -13,13 +13,13 @@ XF86AudioLowerVolume
 XF86AudioMute
 	/usr/bin/pactl set-sink-mute @DEFAULT_SINK -5%
 
-Print
+super + shift + s
 	maim-ss
 
 shift + Print
 	maim-ss
 
-shift + alt + Print
+Print
     maim-wiki
 
 XF86MonBrightnessUp
@@ -33,3 +33,4 @@ super + n
 
 super + shift + n
 	redshift -x
+
