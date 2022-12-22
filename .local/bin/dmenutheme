@@ -20,6 +20,8 @@ case "$CHOICE" in
     'everforest')
         NVIM_THEME=everforest
         ALACRITTY_THEME=everforest
+        ln -sf ~/.config/xtheme/everforest ~/.Xresources
+        xrdb ~/.Xresources
     ;;
     'nord')
         NVIM_THEME=nord
@@ -32,6 +34,8 @@ case "$CHOICE" in
     'rose-pine')
         NVIM_THEME=rose-pine
         ALACRITTY_THEME=rose-pine
+        ln -sf ~/.config/xtheme/rose-pine ~/.Xresources
+        xrdb ~/.Xresources
     ;;
 esac
 

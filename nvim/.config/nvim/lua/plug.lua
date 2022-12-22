@@ -92,7 +92,7 @@ return require('packer').startup(function()
 		config = function() require('gitsigns').setup() end
 	}
     -- lightline
-    use 'itchyny/lightline.vim'
+    -- use 'itchyny/lightline.vim'
 
     use 'norcalli/nvim-colorizer.lua'
 

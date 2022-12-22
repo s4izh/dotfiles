@@ -1,5 +1,5 @@
 -- [[ init.lua ]] --
--- vim.opt.termguicolors = true -- disable to use pywal
+vim.opt.termguicolors = true -- disable to use pywal
 
 vim.g.mapleader = " "
 

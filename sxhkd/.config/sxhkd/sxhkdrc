@@ -36,3 +36,6 @@ super + shift + n
 
 super + alt + s
     feh --bg-fill $(find ~/pix/wall -type f | shuf -n 1)
+
+super + e
+    emacsclient -c
