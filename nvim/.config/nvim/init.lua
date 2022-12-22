@@ -16,9 +16,10 @@ require('plugins/lsp')
 require('plugins/cmp')
 require('plugins/treesitter')
 require('plugins/vimwiki')
+require('plugins/orgmode')
 -- require('plugins/snippets')
 
-vim.cmd("set signcolumn=no")
+vim.cmd("set signcolumn=yes")
 
 require('colorscheme')
 -- vim.cmd("set background=light")

@@ -1,15 +1,15 @@
 -- # Plugins
 
 return require('packer').startup(function()
-	use 'wbthomason/packer.nvim'
+    use 'wbthomason/packer.nvim'
 
     -- colorscheme
     -- use 'ellisonleao/gruvbox.nvim'
     use 'morhetz/gruvbox'
     use 'folke/tokyonight.nvim'
     use 'tanvirtin/monokai.nvim'
-   	use 'sainnhe/everforest'
-   	use 'dylanaraps/wal.vim'
+    use 'sainnhe/everforest'
+    use 'dylanaraps/wal.vim'
     use 'Mofiqul/dracula.nvim'
     use 'navarasu/onedark.nvim'
     use({ 'rose-pine/neovim', as = 'rose-pine' })
@@ -17,17 +17,17 @@ return require('packer').startup(function()
     -------------------------------------------
     -- nerd tree
     use {
-		"nvim-neo-tree/neo-tree.nvim",
-		branch = "v2.x",
-		requires = {
-			"nvim-lua/plenary.nvim",
-			"kyazdani42/nvim-web-devicons", -- not strictly required, but recommended
-			"MunifTanjim/nui.nvim",
-		}
-	}
+        "nvim-neo-tree/neo-tree.nvim",
+        branch = "v2.x",
+        requires = {
+            "nvim-lua/plenary.nvim",
+            "kyazdani42/nvim-web-devicons", -- not strictly required, but recommended
+            "MunifTanjim/nui.nvim",
+        }
+    }
     -- autopairs
     use {
-	    'windwp/nvim-autopairs',
+        'windwp/nvim-autopairs',
         config = function() require('nvim-autopairs').setup {} end
     }
     -------------------------------------------
@@ -43,12 +43,12 @@ return require('packer').startup(function()
         "folke/trouble.nvim",
         requires = "kyazdani42/nvim-web-devicons",
         config = function()
-        require("trouble").setup {
-          -- your configuration comes here
-          -- or leave it empty to use the default settings
-          -- refer to the configuration section below
-        }
-    end
+            require("trouble").setup {
+                -- your configuration comes here
+                -- or leave it empty to use the default settings
+                -- refer to the configuration section below
+            }
+        end
     }
     -------------------------------------------
     -- completions
@@ -77,20 +77,20 @@ return require('packer').startup(function()
     -- telescope
     use {
         'nvim-telescope/telescope.nvim',
-        requires = { {'nvim-lua/plenary.nvim'} }
+        requires = { { 'nvim-lua/plenary.nvim' } }
     }
 
     -- tagbar
     -- use { 'majutsushi/tagbar'}
 
     -- commentaries
-	use{ 'tpope/vim-commentary' }
+    use { 'tpope/vim-commentary' }
 
     -- gitsigns
-   	use {
-		'lewis6991/gitsigns.nvim', requires = { 'nvim-lua/plenary.nvim' },
-		config = function() require('gitsigns').setup() end
-	}
+    use {
+        'lewis6991/gitsigns.nvim', requires = { 'nvim-lua/plenary.nvim' },
+        config = function() require('gitsigns').setup() end
+    }
     -- lightline
     -- use 'itchyny/lightline.vim'
 
@@ -111,5 +111,22 @@ return require('packer').startup(function()
 
     -- easy align
     use 'junegunn/vim-easy-align'
+
+    -- org mode
+    use 'nvim-orgmode/orgmode'
+    use 'akinsho/org-bullets.nvim'
+
+    -- which key
+    use {
+        "folke/which-key.nvim",
+        config = function()
+            require("which-key").setup {
+                -- your configuration comes here
+                -- or leave it empty to use the default settings
+                -- refer to the configuration section below
+            }
+            --
+        end
+    }
 
 end)

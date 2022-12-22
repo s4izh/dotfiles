@@ -27,10 +27,10 @@ vim.diagnostic.config({
     severity_sort = false,
 })
 
-vim.cmd([[
-set signcolumn=yes
-autocmd CursorHold * lua vim.diagnostic.open_float(nil, { focusable = false })
-]])
+-- vim.cmd([[
+-- set signcolumn=yes
+-- autocmd CursorHold * lua vim.diagnostic.open_float(nil, { focusable = false })
+-- ]])
 
 ------- rust tools ------------
 

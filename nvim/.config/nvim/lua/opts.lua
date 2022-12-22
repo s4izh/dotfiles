@@ -56,9 +56,12 @@ vim.api.nvim_set_option('updatetime', 300)
 -- Goto previous / next diagnostic warning / error 
 -- Show inlay_hints more frequently 
 -- set signcolumn=yes
-vim.cmd([[
-autocmd CursorHold * lua vim.diagnostic.open_float(nil, { focusable = false })
-]])
+-- vim.cmd([[
+-- autocmd CursorHold * lua vim.diagnostic.open_float(nil, { focusable = false })
+-- ]])
+
+vim.opt.conceallevel = 2
+vim.opt.concealcursor = 'nc'
 
 -- # Treesitter folding
 

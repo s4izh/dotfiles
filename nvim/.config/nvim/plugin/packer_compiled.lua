@@ -223,6 +223,16 @@ _G.packer_plugins = {
     path = "/home/sergio/.local/share/nvim/site/pack/packer/start/onedark.nvim",
     url = "https://github.com/navarasu/onedark.nvim"
   },
+  ["org-bullets.nvim"] = {
+    loaded = true,
+    path = "/home/sergio/.local/share/nvim/site/pack/packer/start/org-bullets.nvim",
+    url = "https://github.com/akinsho/org-bullets.nvim"
+  },
+  orgmode = {
+    loaded = true,
+    path = "/home/sergio/.local/share/nvim/site/pack/packer/start/orgmode",
+    url = "https://github.com/nvim-orgmode/orgmode"
+  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/home/sergio/.local/share/nvim/site/pack/packer/start/packer.nvim",
