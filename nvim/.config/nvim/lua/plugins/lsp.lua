@@ -14,10 +14,10 @@ local sign = function(opts)
     })
 end
 
-sign({ name = 'DiagnosticSignError', text = '' })
-sign({ name = 'DiagnosticSignWarn', text = '' })
-sign({ name = 'DiagnosticSignHint', text = '' })
-sign({ name = 'DiagnosticSignInfo', text = '' })
+-- sign({ name = 'DiagnosticSignError', text = '' })
+-- sign({ name = 'DiagnosticSignWarn', text = '' })
+-- sign({ name = 'DiagnosticSignHint', text = '' })
+-- sign({ name = 'DiagnosticSignInfo', text = '' })
 
 vim.diagnostic.config({
     virtual_text = true,
@@ -111,7 +111,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
         bufmap('n', 'g.', '<cmd>lua vim.diagnostic.goto_next()<cr>')
 
         -- Move to the next diagnostic
-        -- bufmap('n', '<Leader>k', '<cmd>lua vim.diagnostic.open_float()<cr>')
+        bufmap('n', '<Leader>k', '<cmd>lua vim.diagnostic.open_float()<cr>')
 
         -- format code
         bufmap('n', '<Leader>lf', '<cmd>lua vim.lsp.buf.format()<cr>')

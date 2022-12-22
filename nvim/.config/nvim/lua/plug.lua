@@ -116,17 +116,5 @@ return require('packer').startup(function()
     use 'nvim-orgmode/orgmode'
     use 'akinsho/org-bullets.nvim'
 
-    -- which key
-    use {
-        "folke/which-key.nvim",
-        config = function()
-            require("which-key").setup {
-                -- your configuration comes here
-                -- or leave it empty to use the default settings
-                -- refer to the configuration section below
-            }
-            --
-        end
-    }
-
+    use 'tpope/vim-fugitive'
 end)
