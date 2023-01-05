@@ -49,12 +49,13 @@ zsh_add_completion "esc/conda-zsh-completion" false
 
 # Key-bindings
 bindkey -s '^o' 'ranger^M'
-bindkey -s '^a' 'tmux at -t 0^M'
+bindkey -s '^a' 'tmux-default^M'
+bindkey -s '^n' 'tmux-notes^M'
 bindkey -s '^h' '~/'
 bindkey '^R' history-incremental-search-backward
 
 # [ -f /usr/share/fzf/completion.zsh ] && source /usr/share/fzf/completion.zsh
-# [ -f /usr/share/fzf/key-bindings.zsh ] && source /usr/share/fzf/key-bindings.zsh
+[ -f /usr/share/fzf/key-bindings.zsh ] && source /usr/share/fzf/key-bindings.zsh
 # [ -f /usr/share/doc/fzf/examples/completion.zsh ] && source /usr/share/doc/fzf/examples/completion.zsh
 # [ -f /usr/share/doc/fzf/examples/key-bindings.zsh ] && source /usr/share/doc/fzf/examples/key-bindings.zsh
 # [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
@@ -63,9 +64,9 @@ bindkey '^R' history-incremental-search-backward
 compinit
 
 # Environment variables set everywhere
-export EDITOR="nvim"
+# export EDITOR="nvim"
 # export TERMINAL="alacritty"
-export BROWSER="firefox"
-export BAT_THEME="gruvbox-dark"
+# export BROWSER="firefox"
+# export BAT_THEME="gruvbox-dark"
 
 # eval "$(starship init zsh)"

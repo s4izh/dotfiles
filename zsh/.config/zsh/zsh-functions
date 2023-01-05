@@ -74,7 +74,7 @@ function fzf-lovely(){
 	fi
 }
 
-function p() {
+function za() {
     zathura "$@" &
 }
 
@@ -95,9 +95,11 @@ function open() {
     xdg-open $1 &
 }
 
-function edsc() {
-    cd ~/.local/bin/
-    nvim $(ls ~/.local/bin | fzf)
+function se() {
+    local current_dir=$PWD
+    cd ~/.local/scripts/
+    nvim $(fzf)
+    cd $current_dir
 }
 
 function dwmc() {
@@ -106,7 +108,7 @@ function dwmc() {
 }
 
 function chedit() {
-    nvim ~/.local/share/cheat/$1
+    nvim ~/.local/share/cheat/$1.sh
 }
 
 function vif() {
@@ -120,7 +122,11 @@ function vif() {
 # https://jdhao.github.io/2019/06/13/zsh_bind_keys/
 bindkey -s '^o' 'vif^M'
 
-function wk() {
+wk() {
     cd ~/vimwiki/notes/
     nvim $(fzf)
+}
+
+workon() {
+    tmux-$1
 }

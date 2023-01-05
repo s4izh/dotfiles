@@ -1,9 +1,12 @@
 #!/bin/sh
 
-alias zshcf='cd ~/.config/zsh && nvim .zshrc'
-alias nvimcf='nvim ~/.config/nvim/'
+alias cfz='cd ~/.config/zsh && nvim .zshrc'
+alias cfv='nvim ~/.config/nvim/'
 alias qtilecf='cd ~/.config/qtile && nvim .'
-alias i3cf='cd ~/.config/i3 && nvim config'
+alias cfi='cd ~/.config/i3 && nvim config'
+alias cfd='cd ~/.local/src/dwm && nvim .'
+
+alias tn='tmux-notes'
 
 # Manual aliases
 # alias ll='lsd -lh --group-dirs=first'
@@ -15,9 +18,6 @@ alias ll='ls -lh --color=auto'
 alias la='ls -a --color=auto'
 alias lla='lsd -lha --color=auto'
 alias ls='ls --color=auto'
-# alias cat='bat'
-
-alias v='nvim'
 
 alias j='z'
 alias f='zi'
@@ -36,9 +36,9 @@ alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 
 # confirm before overwriting something
-alias cp="cp -i"
-alias mv='mv -i'
-alias rm='rm -i'
+# alias cp="cp -i"
+# alias mv='mv -i'
+# alias rm='rm -i'
 
 # easier to read disk
 alias df='df -h'     # human-readable sizes
@@ -75,3 +75,32 @@ alias ga="git add"
 alias sshpar="ssh -X par4318@boada.ac.upc.edu"
 
 alias index="nvim index*"
+
+alias \
+	cp="cp -iv" \
+	mv="mv -iv" \
+	rm="rm -vI" \
+	mkd="mkdir -pv" \
+	yt="yt-dlp --embed-metadata -i" \
+	yta="yt -x -f bestaudio/best" \
+	ffmpeg="ffmpeg -hide_banner"
+
+# colorize commands when possible
+alias \
+	ls="ls --color=auto --group-directories-first" \
+	grep="grep --color=auto" \
+	diff="diff --color=auto" \
+	ccat="highlight --out-format=ansi" \
+	ip="ip -color=auto"
+
+# abbreviated long commands
+alias \
+	ka="killall" \
+	g="git" \
+	trem="transmission-remote" \
+	YT="youtube-viewer" \
+	sdn="shutdown -h now" \
+	e="$EDITOR" \
+	v="$EDITOR" \
+	p="pacman" \
+	z="zathura"
